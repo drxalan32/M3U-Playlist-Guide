@@ -1,27 +1,36 @@
-# IPTV Guide – Setup, Apps, Devices & Streaming Help
+# IPTV Guide UK – Setup, Apps, Devices & Streaming Help
 
-Practical IPTV guides for viewers who want to understand internet television, choose compatible devices, set up apps and troubleshoot common streaming problems.
+Independent, practical guides for people researching IPTV in the United Kingdom. Learn how internet television works, compare compatible apps and devices, troubleshoot buffering and check the details that matter before choosing a provider.
 
-**Looking for Kemo TV?** Visit [Kemo TV](https://kemoiptv.digital/) to review current service information, plans, supported devices, availability and terms.
+**Interested in Kemo TV?** Visit [Kemo TV](https://kemoiptv.digital/) to review current service information. Verify UK availability, content authorisation, supported devices, pricing and terms directly with the provider.
 
-> This is an independent educational guide. IPTV is a delivery technology; it does not automatically mean that a provider is authorized to distribute every channel or program. Verify content rights and service terms before subscribing.
+> IPTV is a delivery technology. It does not automatically mean a provider is authorised to distribute every channel or programme. This repository is an independent educational resource, not a verification of any provider's licensing or service claims.
+
+## Start here: IPTV UK guide
+
+- [IPTV UK Guide: Choosing a Service, Apps and Compatible Devices](guides/iptv-uk-guide.md)
 
 ## IPTV guides
-- [IPTV explained: how internet television works](guides/iptv-explained.md)
+- [IPTV explained](guides/iptv-explained.md)
 - [How to set up IPTV on a compatible device](guides/iptv-setup-guide.md)
-- [IPTV apps: what to check before choosing one](guides/iptv-apps-guide.md)
-- [IPTV buffering and connection troubleshooting](guides/iptv-buffering-fixes.md)
-- [Choosing a device for IPTV streaming](guides/iptv-devices-guide.md)
+- [IPTV apps: choosing a compatible player](guides/iptv-apps-guide.md)
+- [IPTV buffering: causes and fixes](guides/iptv-buffering-fixes.md)
+- [Choosing an IPTV device](guides/iptv-devices-guide.md)
 - [IPTV subscription checklist](guides/iptv-subscription-checklist.md)
 
-## Explore Kemo TV
-Considering Kemo TV? Check the [official Kemo TV website](https://kemoiptv.digital/) for up-to-date pricing, supported apps and devices, regional availability, payment terms, cancellation conditions and content information. Do not rely on outdated third-party claims.
+## Kemo TV
+For current service information, visit [the Kemo TV website](https://kemoiptv.digital/). Check availability, supported apps and devices, content rights, pricing, renewals and cancellation terms before subscribing.
 
-## About this repository
-This repository explains IPTV concepts and provides practical setup and troubleshooting information. It does not host playlists, stream links, channel lists or subscription credentials.
+## M3U tools and technical references
+This repository also links to educational M3U resources:
+- [Online M3U Playlist Checker](https://drxalan32.github.io/m3u-playlist-inspector/)
+- [M3U Playlist Generator](https://drxalan32.github.io/m3u-playlist-inspector/#playlist-generator)
+- [M3U and M3U8 format guide](https://drxalan32.github.io/m3u-playlist-inspector/iptv-m3u-playlist-guide.html)
+
+The browser tools process playlist content selected by the user. They do not test remote stream availability, guarantee playback or determine whether a source is licensed.
 
 ## Responsible use
-Only access streams you are legally entitled to watch. Never publish private playlist URLs, passwords, account details or access tokens in a public repository.
+Only access streams you are legally entitled to watch. Do not publish private playlist URLs, passwords, account details or access tokens in public repositories.
 
 ---
 Educational resource. Service-specific information: [Kemo TV](https://kemoiptv.digital/).
