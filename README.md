@@ -4,6 +4,8 @@ Independent, practical guides for people researching IPTV in the United Kingdom.
 
 **Interested in Kemo TV?** Visit [Kemo TV](https://kemoiptv.digital/) to review current service information. Verify UK availability, content authorisation, supported devices, pricing and terms directly with the provider.
 
+Find related resources on the [Kemo IPTV GitHub organization](https://github.com/Kemo-TV).
+
 > IPTV is a delivery technology. It does not automatically mean a provider is authorised to distribute every channel or programme. This repository is an independent educational resource, not a verification of any provider's licensing or service claims.
 
 ## Start here: IPTV UK guide
