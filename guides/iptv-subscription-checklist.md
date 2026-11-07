@@ -1,22 +1,28 @@
-# IPTV Subscription Checklist: What to Verify Before Paying
+# IPTV Subscription in the UK: What to Check Before Paying
 
-Compare IPTV services carefully before entering payment details. A professional-looking website or a working app does not, by itself, prove that a provider has distribution rights.
+Use this checklist to compare IPTV services before entering payment details. A working app, attractive offer or professional-looking website does not prove that a provider has the rights to distribute its advertised content.
 
-## Questions to ask
+## Content rights and availability
+- Can the provider explain that it is authorised to distribute the content in the UK?
+- Is the service available to customers in your location?
+- Are any programme, channel or on-demand restrictions clearly explained?
 
-- Is the provider authorized to distribute the channels and on-demand content it advertises?
-- Is the service available in your country?
-- Which devices and apps are officially supported?
-- What is included in the advertised price?
-- Is billing recurring, and how do renewals work?
-- What are the cancellation and refund terms?
+## Price and terms
+- What is the full price, including any separate app or equipment costs?
+- Is billing recurring, and when does renewal happen?
+- How do cancellation and refunds work?
+- Are trial conditions and limitations written clearly?
+
+## Compatibility and support
+- Which exact devices and apps are supported?
+- Are setup instructions available?
 - How can you contact customer support?
-- What personal information does the provider collect?
+- What information should you provide when reporting a technical issue?
 
-## Protect your account
-
-Use a unique password where applicable. Do not post activation details, playlist URLs, QR codes or account credentials in public forums or repositories.
+## Privacy and account security
+- Read the privacy policy and understand what data is collected.
+- Use a unique password where possible.
+- Never publish activation details, QR codes, playlist URLs or account credentials.
 
 ## Considering Kemo TV?
-
-Review the latest information directly at [Kemo TV](https://kemoiptv.digital/). Confirm availability, pricing, supported devices, payment terms and content authorization before purchasing. This guide does not independently verify those service details.
+Review the latest details directly at [kemoiptv.digital](https://kemoiptv.digital/). Confirm UK availability, content authorisation, pricing, supported devices, payment terms and cancellation conditions before purchasing. This independent guide does not verify those service claims.
