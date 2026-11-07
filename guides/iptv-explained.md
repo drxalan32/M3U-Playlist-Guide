@@ -1,30 +1,24 @@
-# IPTV Explained: How Internet Television Works
+# IPTV in the UK: What Internet Protocol Television Means
 
-IPTV stands for Internet Protocol Television. It describes television content delivered over an IP network instead of exclusively through traditional terrestrial, satellite or cable broadcast systems.
+IPTV (Internet Protocol Television) is television delivered over an internet protocol network. In the UK, viewers may encounter IPTV through broadcaster platforms, pay-TV services and other internet-delivered television providers.
 
 ## How IPTV works
+A typical service involves a content provider, a delivery platform, a compatible app or device, and an internet connection. The exact setup depends on the provider. IPTV is a delivery method: it does not, by itself, tell you whether a provider has permission to distribute a programme.
 
-A typical viewing setup includes:
+## IPTV vs traditional TV
+Traditional terrestrial, cable and satellite services use different distribution infrastructure. IPTV uses IP networks and may support viewing on connected televisions, streaming devices, phones and tablets where compatible.
 
-1. **A content provider** that has the necessary rights to distribute the programming.
-2. **A delivery platform** that makes authorized streams available over an internet connection.
-3. **A compatible app or device** that receives and plays the stream.
-4. **An internet connection** with enough capacity and stability for the selected video quality.
+## What UK viewers should check
+- Whether the provider has the rights needed to offer the content in the UK.
+- Which devices and apps are supported in the UK.
+- The full price, renewal schedule and cancellation terms.
+- Whether customer support is available and how to contact it.
+- What personal data is collected and how it is protected.
 
-The exact architecture differs between providers. IPTV is a delivery method, not a guarantee that a particular service is licensed, reliable or compatible with every device.
+## Considering Kemo TV?
+Visit [Kemo TV](https://kemoiptv.digital/) for the provider's current information. Check UK availability, content rights, supported devices, pricing and terms directly before subscribing. This guide does not independently verify those service details.
 
-## IPTV vs traditional television
-
-Traditional cable and satellite services use dedicated distribution infrastructure. IPTV uses IP networks, which can make viewing possible on a range of connected devices. Performance depends on the provider, network conditions, device and app.
-
-## What should viewers check?
-
-- Whether the provider is authorized to distribute its content.
-- Which countries and devices are supported.
-- Whether the app is compatible with the device's operating system.
-- Current prices, renewal terms and cancellation policy.
-- Privacy practices and customer support options.
-
-## Learn more about Kemo TV
-
-For current service details, visit [Kemo TV](https://kemoiptv.digital/). Check its published terms, supported devices, availability and content rights before subscribing.
+## Related IPTV guides
+- [IPTV subscription checklist](iptv-subscription-checklist.md)
+- [IPTV apps guide](iptv-apps-guide.md)
+- [IPTV device guide](iptv-devices-guide.md)
