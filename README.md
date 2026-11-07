@@ -1,15 +1,20 @@
-# M3U Playlist Guide
+# M3U Playlist Guide – M3U and M3U8 Format, Metadata & Validation
 
-Practical, beginner-friendly documentation about **M3U and M3U8 playlist files**: how they are structured, how metadata works, how to organize entries, and how to troubleshoot common formatting problems.
+**M3U Playlist Guide** is a practical reference for understanding, creating, organizing and validating **M3U and M3U8 playlist files**. Learn the M3U format, EXTINF syntax, channel metadata (tvg-id, tvg-name, tvg-logo, group-title), UTF-8 encoding and common playlist errors.
 
-This repository is an independent learning resource for developers, playlist maintainers, and people working with media playlists they own or are authorized to use.
+This independent guide is for developers, media-library maintainers and users who need to inspect playlist files they own or are authorized to use. It includes clear examples, troubleshooting checklists and links to browser-based M3U tools.
 
-## Start here
+## M3U playlist tutorials
+
+Start with the format basics, then explore metadata and validation:
 
 - [M3U playlist format explained](guides/m3u-playlist-format.md)
 - [M3U vs M3U8: key differences](guides/m3u-vs-m3u8.md)
 - [How to organize an M3U playlist](guides/organize-m3u-playlist.md)
 - [How to validate and troubleshoot an M3U file](guides/validate-and-troubleshoot-m3u.md)
+- [M3U EXTINF explained](guides/m3u-extinf-explained.md)
+- [M3U TVG metadata explained](guides/m3u-tvg-metadata.md)
+- [M3U playlist errors and fixes](guides/m3u-playlist-errors.md)
 
 ## Online tools
 
