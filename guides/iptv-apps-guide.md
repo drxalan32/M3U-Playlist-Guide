@@ -1,22 +1,19 @@
-# IPTV Apps: What to Check Before Choosing One
+# IPTV Apps in the UK: How to Choose a Compatible Player
 
-An IPTV app is a player or interface used to access compatible internet television services. An app is not itself proof that the channels or streams entered into it are authorized.
+IPTV apps provide an interface for compatible internet television services. An app is a player; it is not automatically a content provider, and installing an app does not establish that a stream is authorised.
 
-## App selection checklist
+## What to check before installing an IPTV app
+- **UK availability:** Is the app available for your device and region?
+- **Device compatibility:** Does it support your exact TV, streaming box, phone or tablet?
+- **Trusted download source:** Prefer official app stores and the developer's verified website.
+- **Privacy:** Review permissions and the privacy policy.
+- **Maintenance:** Check update history and developer support.
+- **Provider compatibility:** Confirm that your authorised provider supports the app and sign-in method.
 
-- **Device support:** Check compatibility with your TV, streaming box, phone or tablet.
-- **Official distribution:** Prefer apps available through the device maker's official store.
-- **Privacy:** Review permissions and the app's privacy policy.
-- **Updates:** Check whether the app is maintained and receives security updates.
-- **Provider compatibility:** Confirm that your authorized provider supports the app.
-- **Ease of use:** Consider navigation, search, favorites and accessibility.
+## Player app vs IPTV provider
+The player handles the viewing interface. The provider is responsible for supplying access to content and explaining its distribution rights, subscription terms and support arrangements. Check these separately.
 
-## Player vs provider
+## Questions to ask a provider
+Ask which apps are supported in the UK, whether an app licence costs extra, which devices are compatible and where official setup instructions are published.
 
-A player provides playback functionality. A content provider supplies access to programming and is responsible for the rights and terms associated with that content. Check both independently.
-
-## Before subscribing
-
-Ask the provider which apps are supported, whether a separate app purchase is required, which devices are compatible and what support is available.
-
-For Kemo TV's current compatibility information, visit [kemoiptv.digital](https://kemoiptv.digital/).
+For current Kemo TV app and device information, check [Kemo TV](https://kemoiptv.digital/) directly. This guide does not claim that any particular app is supported by the service.
