@@ -6,4 +6,49 @@
 <p>For an example of a provider's own published service information, see the <a href="https://kemoiptv.digital/" rel="sponsored">Kemo TV website</a>. This is a promotional external link, not confirmation that Kemo TV supports Apple TV or an endorsement of its service; verify device compatibility and service details directly before subscribing.</p>
 <h2>Network tips</h2><p>Use a reliable Wi-Fi connection or Ethernet where your Apple TV model supports it. If playback buffers, compare performance on another device, restart your router and check whether other household activity is using bandwidth. See our <a href="iptv-internet-requirements.html">internet requirements guide</a> and <a href="iptv-buffering-fixes.html">buffering troubleshooting guide</a>.</p>
 <p>For current provider-published details, you can also <a href="https://kemoiptv.digital/" rel="sponsored">check the Kemo TV website</a>. This promotional link is not confirmation of Apple TV compatibility or an endorsement; verify all device and service details directly.</p>
-<h2>Frequently asked questions</h2><h3>Does every IPTV app work on Apple TV?</h3><p>No. App developers decide which Apple platforms they support. Check the App Store listing and provider documentation for the exact model and tvOS version.</p><h3>Does installing a player provide TV channels?</h3><p>Not necessarily. A player app and a content provider are different things. Confirm the provider's authorisation, availability and subscription terms independently.</p><h3>Is this an endorsement of a provider?</h3><p>No. IPTV Guide UK is an independent educational resource and does not certify providers, apps or content rights.</p><hr><p>Explore more: <a href="../index.html">IPTV Guide UK</a> · <a href="iptv-uk-guide.html">UK IPTV guide</a> · <a href="iptv-devices-guide.html">Device guide</a> · <a href="iptv-apps-guide.html">App guide</a></p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · Independent educational resource · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></div></footer><script src="../analytics.js" defer></script></body></html>
+<h2>Frequently asked questions</h2><h3>Does every IPTV app work on Apple TV?</h3><p>No. App developers decide which Apple platforms they support. Check the App Store listing and provider documentation for the exact model and tvOS version.</p><h3>Does installing a player provide TV channels?</h3><p>Not necessarily. A player app and a content provider are different things. Confirm the provider's authorisation, availability and subscription terms independently.</p><h3>Is this an endorsement of a provider?</h3><p>No. IPTV Guide UK is an independent educational resource and does not certify providers, apps or content rights.</p><hr><p>Explore more: <a href="../index.html">IPTV Guide UK</a> · <a href="iptv-uk-guide.html">UK IPTV guide</a> · <a href="iptv-devices-guide.html">Device guide</a> · <a href="iptv-apps-guide.html">App guide</a></p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · Independent educational resource · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></div></footer><script>
+(function(){
+"use strict";
+var ID="G-4MG610MKFM", KEY="iptv_guide_analytics_consent", ready=false;
+function load(){
+ if(ready)return;ready=true;
+ window.dataLayer=window.dataLayer||[];
+ window.gtag=function(){window.dataLayer.push(arguments);};
+ window.gtag("js",new Date());
+ window.gtag("config",ID,{send_page_view:false});
+ var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ID;document.head.appendChild(s);
+ window.gtag("event","page_view",{page_title:document.title,page_location:location.href,page_path:location.pathname});
+}
+function banner(){
+ var old=document.getElementById("analytics-consent-banner");if(old)old.remove();
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(e){}
+ if(choice==="accepted"||choice==="rejected")return;
+ var p=location.pathname, privacy=(p.indexOf("/guides/")!==-1||p.indexOf("/kemo-tv/")!==-1)?"../privacy.html":"privacy.html";
+ var el=document.createElement("section");el.id="analytics-consent-banner";el.setAttribute("role","dialog");el.setAttribute("aria-label","Analytics cookie preferences");
+ el.innerHTML='<div class="analytics-consent-copy"><strong>Privacy preferences</strong><p>We use optional Google Analytics to understand how visitors use this guide and which pages lead to external links. Analytics stays off unless you allow it. <a href="'+privacy+'">Read our privacy policy</a>.</p></div><div class="analytics-consent-actions"><button type="button" id="analytics-reject">Reject optional analytics</button><button type="button" id="analytics-accept">Allow analytics</button></div>';
+ document.body.appendChild(el);
+ document.getElementById("analytics-reject").onclick=function(){try{localStorage.setItem(KEY,"rejected")}catch(e){}if(window.gtag)window.gtag("consent","update",{analytics_storage:"denied"});banner();};
+ document.getElementById("analytics-accept").onclick=function(){try{localStorage.setItem(KEY,"accepted")}catch(e){}load();banner();};
+}
+function manage(){
+ if(document.getElementById("analytics-manage-link"))return;
+ var b=document.createElement("button");b.id="analytics-manage-link";b.type="button";b.textContent="Cookie preferences";
+ b.onclick=function(){try{localStorage.removeItem(KEY)}catch(e){}banner();};document.body.appendChild(b);
+}
+document.addEventListener("click",function(e){
+ var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;if(!a)return;
+ var u;try{u=new URL(a.href,location.href)}catch(err){return}
+ if(u.hostname!=="kemoiptv.digital"&&u.hostname!=="www.kemoiptv.digital")return;
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(err){}
+ if(choice!=="accepted"||typeof window.gtag!=="function")return;
+ var pos=a.closest("nav")?"navigation":a.classList.contains("cta")?"cta":a.closest("footer")?"footer":"in_content";
+ var label=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,100), dest=a.href, done=false;
+ e.preventDefault();
+ function go(){if(done)return;done=true;location.href=dest;}
+ window.gtag("event","outbound_kemo_click",{page_title:document.title,page_location:location.href,page_path:location.pathname,link_url:dest,link_text:label,link_position:pos,transport_type:"beacon",event_callback:go,event_timeout:800});
+ setTimeout(go,900);
+});
+try{if(localStorage.getItem(KEY)==="accepted")load()}catch(e){}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){banner();manage()});else{banner();manage()}
+})();
+</script></body></html>
