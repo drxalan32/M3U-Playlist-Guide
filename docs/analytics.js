@@ -25,6 +25,7 @@
   function saveChoice(choice) {
     try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
     if (choice === "accepted") loadAnalytics();
+    else if (window.gtag) window.gtag("consent", "update", { analytics_storage: "denied" });
     renderBanner();
   }
 
