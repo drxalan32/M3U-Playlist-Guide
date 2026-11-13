@@ -1,1 +1,46 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy</title><meta name="description" content="Privacy information for visitors to the IPTV Guide UK static website."><link rel="canonical" href="https://drxalan32.github.io/M3U-Playlist-Guide/privacy.html"><meta property="og:title" content="Privacy Policy"><meta property="og:description" content="Privacy information for visitors to IPTV Guide UK."><link rel="stylesheet" href="style.css"></head><body><header class="top"><div class="wrap nav"><a class="logo" href="index.html">IPTV Guide UK</a><nav><a href="index.html#guides">Guides</a><a href="https://kemoiptv.digital/">Kemo TV</a></nav></div></header><main class="wrap" style="padding:34px 0"><article class="article"><div class="breadcrumbs"><a href="index.html">Home</a> / Privacy Policy</div><h1>Privacy Policy</h1><p>This page describes the current operation of IPTV Guide UK, a static website hosted using GitHub Pages.</p><h2>Information handled by hosting</h2><p>When you visit a hosted website, the hosting provider may process technical information such as IP address, browser details, requested pages and timestamps for delivery, security and service operation. Consult <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a> for details about its processing.</p><h2>Forms, accounts and analytics</h2><p>This website uses Google Analytics 4 (GA4) to measure page visits and interactions, including clicks to the Kemo TV website. Optional analytics is disabled by default and loads only after you select “Allow analytics” in the consent banner. If you reject optional analytics, GA4 is not loaded. Your preference is stored in this browser so the banner does not appear on every visit. You can change your choice at any time using the “Cookie preferences” control on the website. GA4 may process technical and usage information such as page views, browser/device information, approximate location and interaction events. Do not submit sensitive personal information through analytics events.</p><h2>External links</h2><p>Links to third-party websites, including Kemo TV and GitHub, are governed by those websites' own privacy policies and practices. Review their policies before providing personal information.</p><h2>Changes</h2><p>This policy may be updated if the website's features or data practices change. The latest version will be published on this page.</p><p class="small">Last updated: 13 November 2026.</p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></div></footer><script src="analytics.js" defer></script></body></html>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy</title><meta name="description" content="Privacy information for visitors to the IPTV Guide UK static website."><link rel="canonical" href="https://drxalan32.github.io/M3U-Playlist-Guide/privacy.html"><meta property="og:title" content="Privacy Policy"><meta property="og:description" content="Privacy information for visitors to IPTV Guide UK."><link rel="stylesheet" href="style.css"></head><body><header class="top"><div class="wrap nav"><a class="logo" href="index.html">IPTV Guide UK</a><nav><a href="index.html#guides">Guides</a><a href="https://kemoiptv.digital/">Kemo TV</a></nav></div></header><main class="wrap" style="padding:34px 0"><article class="article"><div class="breadcrumbs"><a href="index.html">Home</a> / Privacy Policy</div><h1>Privacy Policy</h1><p>This page describes the current operation of IPTV Guide UK, a static website hosted using GitHub Pages.</p><h2>Information handled by hosting</h2><p>When you visit a hosted website, the hosting provider may process technical information such as IP address, browser details, requested pages and timestamps for delivery, security and service operation. Consult <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a> for details about its processing.</p><h2>Forms, accounts and analytics</h2><p>This website uses Google Analytics 4 (GA4) to measure page visits and interactions, including clicks to the Kemo TV website. Optional analytics is disabled by default and loads only after you select “Allow analytics” in the consent banner. If you reject optional analytics, GA4 is not loaded. Your preference is stored in this browser so the banner does not appear on every visit. You can change your choice at any time using the “Cookie preferences” control on the website. GA4 may process technical and usage information such as page views, browser/device information, approximate location and interaction events. Do not submit sensitive personal information through analytics events.</p><h2>External links</h2><p>Links to third-party websites, including Kemo TV and GitHub, are governed by those websites' own privacy policies and practices. Review their policies before providing personal information.</p><h2>Changes</h2><p>This policy may be updated if the website's features or data practices change. The latest version will be published on this page.</p><p class="small">Last updated: 13 November 2026.</p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></div></footer><script>
+(function(){
+"use strict";
+var ID="G-4MG610MKFM", KEY="iptv_guide_analytics_consent", ready=false;
+function load(){
+ if(ready)return;ready=true;
+ window.dataLayer=window.dataLayer||[];
+ window.gtag=function(){window.dataLayer.push(arguments);};
+ window.gtag("js",new Date());
+ window.gtag("config",ID,{send_page_view:false});
+ var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ID;document.head.appendChild(s);
+ window.gtag("event","page_view",{page_title:document.title,page_location:location.href,page_path:location.pathname});
+}
+function banner(){
+ var old=document.getElementById("analytics-consent-banner");if(old)old.remove();
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(e){}
+ if(choice==="accepted"||choice==="rejected")return;
+ var p=location.pathname, privacy=(p.indexOf("/guides/")!==-1||p.indexOf("/kemo-tv/")!==-1)?"../privacy.html":"privacy.html";
+ var el=document.createElement("section");el.id="analytics-consent-banner";el.setAttribute("role","dialog");el.setAttribute("aria-label","Analytics cookie preferences");
+ el.innerHTML='<div class="analytics-consent-copy"><strong>Privacy preferences</strong><p>We use optional Google Analytics to understand how visitors use this guide and which pages lead to external links. Analytics stays off unless you allow it. <a href="'+privacy+'">Read our privacy policy</a>.</p></div><div class="analytics-consent-actions"><button type="button" id="analytics-reject">Reject optional analytics</button><button type="button" id="analytics-accept">Allow analytics</button></div>';
+ document.body.appendChild(el);
+ document.getElementById("analytics-reject").onclick=function(){try{localStorage.setItem(KEY,"rejected")}catch(e){}if(window.gtag)window.gtag("consent","update",{analytics_storage:"denied"});banner();};
+ document.getElementById("analytics-accept").onclick=function(){try{localStorage.setItem(KEY,"accepted")}catch(e){}load();banner();};
+}
+function manage(){
+ if(document.getElementById("analytics-manage-link"))return;
+ var b=document.createElement("button");b.id="analytics-manage-link";b.type="button";b.textContent="Cookie preferences";
+ b.onclick=function(){try{localStorage.removeItem(KEY)}catch(e){}banner();};document.body.appendChild(b);
+}
+document.addEventListener("click",function(e){
+ var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;if(!a)return;
+ var u;try{u=new URL(a.href,location.href)}catch(err){return}
+ if(u.hostname!=="kemoiptv.digital"&&u.hostname!=="www.kemoiptv.digital")return;
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(err){}
+ if(choice!=="accepted"||typeof window.gtag!=="function")return;
+ var pos=a.closest("nav")?"navigation":a.classList.contains("cta")?"cta":a.closest("footer")?"footer":"in_content";
+ var label=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,100), dest=a.href, done=false;
+ e.preventDefault();
+ function go(){if(done)return;done=true;location.href=dest;}
+ window.gtag("event","outbound_kemo_click",{page_title:document.title,page_location:location.href,page_path:location.pathname,link_url:dest,link_text:label,link_position:pos,transport_type:"beacon",event_callback:go,event_timeout:800});
+ setTimeout(go,900);
+});
+try{if(localStorage.getItem(KEY)==="accepted")load()}catch(e){}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){banner();manage()});else{banner();manage()}
+})();
+</script></body></html>
