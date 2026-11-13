@@ -1,1 +1,46 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About IPTV Guide UK</title><meta name="description" content="Learn about the purpose, editorial approach and commercial relationship disclosures of IPTV Guide UK."><link rel="canonical" href="https://drxalan32.github.io/M3U-Playlist-Guide/about.html"><meta property="og:title" content="About IPTV Guide UK"><meta property="og:description" content="Our purpose, editorial approach and relationship disclosure."><link rel="stylesheet" href="style.css"></head><body><header class="top"><div class="wrap nav"><a class="logo" href="index.html">IPTV Guide UK</a><nav><a href="index.html#guides">Guides</a><a href="https://kemoiptv.digital/">Kemo TV</a></nav></div></header><main class="wrap" style="padding:34px 0"><article class="article"><div class="breadcrumbs"><a href="index.html">Home</a> / About IPTV Guide UK</div><h1>About IPTV Guide UK</h1><p>IPTV Guide UK publishes educational information for readers researching internet-delivered television in the United Kingdom.</p><h2>What we publish</h2><p>We publish explainers and checklists about IPTV terminology, compatible devices, apps, setup and common troubleshooting steps. Articles are intended as general information and should be checked against current manufacturer and provider documentation.</p><h2>Relationship disclosure</h2><p>This website promotes Kemo TV and links readers to <a href="https://kemoiptv.digital/">kemoiptv.digital</a>. Readers should treat those links as promotional references, not independent reviews. We do not claim to have independently verified Kemo TV's content rights, availability, performance, device compatibility, pricing or service terms. Check those details directly before purchasing.</p><h2>Editorial approach</h2><p>Our guides encourage readers to verify provider authorisation, regional availability, device compatibility, pricing, renewal and cancellation terms directly with each provider. IPTV is a delivery technology; it does not itself establish that a service is authorised to distribute particular content.</p><h2>Corrections</h2><p>If you notice an error or outdated information, use the public repository's issue or discussion features on <a href="https://github.com/drxalan32/M3U-Playlist-Guide">GitHub</a>. Do not post passwords, playlist URLs, activation codes or other private account information.</p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></div></footer><script src="analytics.js" defer></script></body></html>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About IPTV Guide UK</title><meta name="description" content="Learn about the purpose, editorial approach and commercial relationship disclosures of IPTV Guide UK."><link rel="canonical" href="https://drxalan32.github.io/M3U-Playlist-Guide/about.html"><meta property="og:title" content="About IPTV Guide UK"><meta property="og:description" content="Our purpose, editorial approach and relationship disclosure."><link rel="stylesheet" href="style.css"></head><body><header class="top"><div class="wrap nav"><a class="logo" href="index.html">IPTV Guide UK</a><nav><a href="index.html#guides">Guides</a><a href="https://kemoiptv.digital/">Kemo TV</a></nav></div></header><main class="wrap" style="padding:34px 0"><article class="article"><div class="breadcrumbs"><a href="index.html">Home</a> / About IPTV Guide UK</div><h1>About IPTV Guide UK</h1><p>IPTV Guide UK publishes educational information for readers researching internet-delivered television in the United Kingdom.</p><h2>What we publish</h2><p>We publish explainers and checklists about IPTV terminology, compatible devices, apps, setup and common troubleshooting steps. Articles are intended as general information and should be checked against current manufacturer and provider documentation.</p><h2>Relationship disclosure</h2><p>This website promotes Kemo TV and links readers to <a href="https://kemoiptv.digital/">kemoiptv.digital</a>. Readers should treat those links as promotional references, not independent reviews. We do not claim to have independently verified Kemo TV's content rights, availability, performance, device compatibility, pricing or service terms. Check those details directly before purchasing.</p><h2>Editorial approach</h2><p>Our guides encourage readers to verify provider authorisation, regional availability, device compatibility, pricing, renewal and cancellation terms directly with each provider. IPTV is a delivery technology; it does not itself establish that a service is authorised to distribute particular content.</p><h2>Corrections</h2><p>If you notice an error or outdated information, use the public repository's issue or discussion features on <a href="https://github.com/drxalan32/M3U-Playlist-Guide">GitHub</a>. Do not post passwords, playlist URLs, activation codes or other private account information.</p></article></main><footer class="footer"><div class="wrap">IPTV Guide UK · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></div></footer><script>
+(function(){
+"use strict";
+var ID="G-4MG610MKFM", KEY="iptv_guide_analytics_consent", ready=false;
+function load(){
+ if(ready)return;ready=true;
+ window.dataLayer=window.dataLayer||[];
+ window.gtag=function(){window.dataLayer.push(arguments);};
+ window.gtag("js",new Date());
+ window.gtag("config",ID,{send_page_view:false});
+ var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ID;document.head.appendChild(s);
+ window.gtag("event","page_view",{page_title:document.title,page_location:location.href,page_path:location.pathname});
+}
+function banner(){
+ var old=document.getElementById("analytics-consent-banner");if(old)old.remove();
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(e){}
+ if(choice==="accepted"||choice==="rejected")return;
+ var p=location.pathname, privacy=(p.indexOf("/guides/")!==-1||p.indexOf("/kemo-tv/")!==-1)?"../privacy.html":"privacy.html";
+ var el=document.createElement("section");el.id="analytics-consent-banner";el.setAttribute("role","dialog");el.setAttribute("aria-label","Analytics cookie preferences");
+ el.innerHTML='<div class="analytics-consent-copy"><strong>Privacy preferences</strong><p>We use optional Google Analytics to understand how visitors use this guide and which pages lead to external links. Analytics stays off unless you allow it. <a href="'+privacy+'">Read our privacy policy</a>.</p></div><div class="analytics-consent-actions"><button type="button" id="analytics-reject">Reject optional analytics</button><button type="button" id="analytics-accept">Allow analytics</button></div>';
+ document.body.appendChild(el);
+ document.getElementById("analytics-reject").onclick=function(){try{localStorage.setItem(KEY,"rejected")}catch(e){}if(window.gtag)window.gtag("consent","update",{analytics_storage:"denied"});banner();};
+ document.getElementById("analytics-accept").onclick=function(){try{localStorage.setItem(KEY,"accepted")}catch(e){}load();banner();};
+}
+function manage(){
+ if(document.getElementById("analytics-manage-link"))return;
+ var b=document.createElement("button");b.id="analytics-manage-link";b.type="button";b.textContent="Cookie preferences";
+ b.onclick=function(){try{localStorage.removeItem(KEY)}catch(e){}banner();};document.body.appendChild(b);
+}
+document.addEventListener("click",function(e){
+ var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;if(!a)return;
+ var u;try{u=new URL(a.href,location.href)}catch(err){return}
+ if(u.hostname!=="kemoiptv.digital"&&u.hostname!=="www.kemoiptv.digital")return;
+ var choice=null;try{choice=localStorage.getItem(KEY)}catch(err){}
+ if(choice!=="accepted"||typeof window.gtag!=="function")return;
+ var pos=a.closest("nav")?"navigation":a.classList.contains("cta")?"cta":a.closest("footer")?"footer":"in_content";
+ var label=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,100), dest=a.href, done=false;
+ e.preventDefault();
+ function go(){if(done)return;done=true;location.href=dest;}
+ window.gtag("event","outbound_kemo_click",{page_title:document.title,page_location:location.href,page_path:location.pathname,link_url:dest,link_text:label,link_position:pos,transport_type:"beacon",event_callback:go,event_timeout:800});
+ setTimeout(go,900);
+});
+try{if(localStorage.getItem(KEY)==="accepted")load()}catch(e){}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){banner();manage()});else{banner();manage()}
+})();
+</script></body></html>
