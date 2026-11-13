@@ -41,7 +41,7 @@
     banner.setAttribute("aria-label", "Analytics cookie preferences");
     banner.innerHTML =
       '<div class="analytics-consent-copy"><strong>Privacy preferences</strong>' +
-      '<p>We use optional Google Analytics to understand how visitors use this guide and which pages lead to external links. Analytics stays off unless you allow it. <a href="' + (location.pathname.indexOf("/guides/") === 0 ? "../privacy.html" : location.pathname.indexOf("/kemo-tv/") === 0 ? "../privacy.html" : "privacy.html") + '">Read our privacy policy</a>.</p></div>' +
+      '<p>We use optional Google Analytics to understand how visitors use this guide and which pages lead to external links. Analytics stays off unless you allow it. <a href="' + (location.pathname.indexOf("/guides/") !== -1 ? "../privacy.html" : location.pathname.indexOf("/kemo-tv/") !== -1 ? "../privacy.html" : "privacy.html") + '">Read our privacy policy</a>.</p></div>' +
       '<div class="analytics-consent-actions"><button type="button" id="analytics-reject">Reject optional analytics</button><button type="button" id="analytics-accept">Allow analytics</button></div>';
     document.body.appendChild(banner);
     document.getElementById("analytics-reject").addEventListener("click", function () { saveChoice("rejected"); });
