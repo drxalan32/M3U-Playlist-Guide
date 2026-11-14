@@ -288,3 +288,66 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 @media(max-width:1050px){.hero-layout{grid-template-columns:1fr 1fr}.hero-copy{padding-left:32px}.reference-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.hero-layout{display:flex;flex-direction:column}.hero-copy{padding:30px 22px 12px}.hero-art{width:100%}.reference-main{width:calc(100% - 32px)}.reference-cards{gap:14px;grid-template-columns:1fr 1fr}.card-art{height:105px}.reference-card>div:not(.card-art){padding:10px 12px 13px}.epg-screen{font-size:8px}.epg-screen b{font-size:9px}}
 @media(max-width:420px){.reference-cards{grid-template-columns:1fr}.card-art{height:150px}}
+
+/* FINAL DESKTOP GRID FIX — lock the approved 2-column composition */
+@media (min-width: 901px) {
+  .hero.reference-hero { width:100%; padding:0; }
+  .hero.reference-hero > .hero-layout.wrap {
+    width:min(1400px,calc(100% - 64px)) !important;
+    max-width:1400px !important;
+    min-height:464px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:minmax(0, .94fr) minmax(0, 1.06fr);
+    align-items:center;
+    gap:24px;
+  }
+  .hero.reference-hero .hero-copy {
+    width:100%;
+    min-width:0;
+    padding:34px 0 30px 20px;
+    margin:0;
+  }
+  .hero.reference-hero .hero-copy h1 {
+    max-width:650px;
+    font-size:clamp(40px,4.1vw,56px);
+    line-height:1.08;
+    letter-spacing:-2px;
+  }
+  .hero.reference-hero .hero-copy>p {
+    max-width:590px;
+    font-size:18px;
+    line-height:1.62;
+  }
+  .hero.reference-hero .hero-art {
+    width:100%;
+    min-width:0;
+    height:464px;
+    min-height:464px;
+    padding:0;
+  }
+  .hero.reference-hero .tv-scene {
+    width:100%;
+    max-width:760px;
+    height:430px;
+    flex:none;
+  }
+}
+@media (min-width:1200px) {
+  .reference-main.wrap { width:min(1400px,calc(100% - 64px)); }
+  .reference-cards { grid-template-columns:repeat(4,minmax(0,1fr)); gap:26px; }
+  .reference-card { min-width:0; }
+  .reference-card .card-art { height:126px; }
+  .reference-how { padding:4px 36px 22px; }
+}
+@media (min-width:721px) and (max-width:900px) {
+  .hero.reference-hero > .hero-layout.wrap { width:calc(100% - 48px); }
+  .hero.reference-hero .hero-copy { padding:30px 12px 16px; }
+  .hero.reference-hero .hero-art { min-height:360px; }
+}
+@media (max-width:720px) {
+  .hero.reference-hero > .hero-layout.wrap { width:100%; }
+  .hero.reference-hero .hero-copy { width:100%; padding:30px 22px 12px; }
+  .hero.reference-hero .hero-art { width:100%; min-height:280px; }
+  .reference-main.wrap { width:calc(100% - 32px); }
+}
