@@ -219,3 +219,40 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .guide-article .guide-visual img{display:block;width:100%;height:auto;max-height:430px;object-fit:cover}
 .guide-article .guide-visual figcaption{padding:11px 16px;font-size:13px;color:#64758e}
 @media(max-width:720px){.guide-main{width:calc(100% - 24px);padding:18px 0 40px!important}.guide-article{padding:22px 18px;border-radius:14px}.guide-article h1{font-size:34px}.guide-article>p{font-size:16px}.guide-article h2{font-size:24px}.guide-article .main-nav{gap:12px}}
+
+/* Exact hero composition: IPTV screen, set-top box, remote and phone */
+.hero.reference-hero{background:linear-gradient(105deg,#fff 0%,#f4f8ff 39%,#d9e9ff 65%,#a9d0ff 100%)}
+.hero-layout{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);min-height:464px}
+.hero-copy{padding-top:36px;padding-bottom:34px}
+.hero-copy>p{max-width:600px}
+.hero-art{min-height:464px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 54% 55%,#7bb7ff 0%,#c6e0ff 44%,#eaf4ff 76%,transparent 100%)}
+.tv-scene{position:relative;width:min(100%,760px);height:430px;margin:0 auto}
+.tv-screen{position:absolute;right:11%;top:7%;width:74%;height:72%;padding:18px 20px 16px;background:linear-gradient(145deg,#06132b,#001b42 70%,#06152b);border:7px solid #111b2b;border-bottom-width:11px;border-radius:13px 13px 8px 8px;box-shadow:0 18px 36px #0a244a55;transform:perspective(1000px) rotateY(-3deg)}
+.tv-topline{display:flex;justify-content:space-between;align-items:center;color:#e9f5ff;font-size:24px;font-weight:800;margin:0 0 16px}
+.tv-topline small{font-size:13px;font-weight:600}
+.tv-content{display:grid;grid-template-columns:29% 1fr;gap:12px;height:calc(100% - 42px)}
+.tv-menu{display:flex;flex-direction:column;gap:8px;padding:5px 0;color:#dbeaff;font-size:13px}
+.tv-menu>*{padding:8px 9px;border-radius:7px}
+.tv-menu b{background:#0868f4;color:white}
+.tv-tiles{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:9px}
+.tv-tile{position:relative;display:flex;align-items:end;justify-content:center;padding:10px 5px;color:#fff;font-weight:800;font-size:14px;border:1px solid #254b7b;border-radius:9px;overflow:hidden;text-shadow:0 2px 5px #000}
+.tv-tile:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#0755a8,#081a39)}
+.tv-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent 65%)}
+.tv-tile{isolation:isolate}
+.tv-tile>*{position:relative}
+.tv-tile.sports:before{background:radial-gradient(ellipse at 50% 65%,#48a8e9,#06366c 62%,#101c3c)}
+.tv-tile.movies:before{background:radial-gradient(circle at 50% 35%,#d78b50,#4b2535 48%,#111b35)}
+.tv-tile.series:before{background:linear-gradient(135deg,#e87943,#212d69 70%)}
+.tv-tile.live:before{background:linear-gradient(135deg,#65b7ed,#0b3270)}
+.tv-tile.live i{position:absolute;top:7px;right:7px;background:#ef233c;color:#fff;font-style:normal;font-size:9px;padding:3px 5px;border-radius:4px}
+.tv-bezel{position:absolute;right:31%;top:79%;width:34%;height:13px;background:linear-gradient(#26384b,#111b28);clip-path:polygon(12% 0,88% 0,100% 100%,0 100%)}
+.stream-box{position:absolute;left:10%;bottom:5%;width:30%;height:52px;border-radius:10px;background:linear-gradient(160deg,#24364c,#050b14 70%);box-shadow:0 12px 17px #071b3d66;display:grid;place-items:center;color:#0e79ff;font-size:19px;font-weight:900;letter-spacing:1px}
+.remote-control{position:absolute;left:44%;bottom:3%;width:23%;height:34px;border-radius:18px;background:linear-gradient(110deg,#090d13,#3a4552,#090d13);transform:rotate(12deg);box-shadow:0 8px 13px #07152c66;color:#b9c6d8;font-size:9px;display:flex;align-items:center;justify-content:space-around}
+.phone-device{position:absolute;right:2%;bottom:5%;width:15%;height:54%;border:5px solid #111a28;border-radius:22px;background:linear-gradient(160deg,#061a3c,#020b1d);box-shadow:0 13px 25px #081b3c66;color:white;display:flex;flex-direction:column;gap:12px;padding:22px 8px 10px;font-size:11px;transform:rotate(7deg)}
+.phone-notch{position:absolute;top:5px;left:32%;width:36%;height:7px;border-radius:8px;background:#111}
+.phone-device b{font-size:13px;margin-bottom:4px}
+.phone-device strong{background:#0868f4;border-radius:6px;padding:7px 4px}
+.phone-device span{padding-left:4px;color:#dbeaff}
+.hero-image-caption{display:none}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr}.hero-copy{padding:34px 28px 12px}.hero-art{min-height:360px}.tv-scene{height:350px;width:min(100%,650px)}}
+@media(max-width:560px){.hero-art{min-height:280px}.tv-scene{height:270px}.tv-screen{right:12%;width:76%;height:70%;padding:10px}.tv-topline{font-size:15px;margin-bottom:8px}.tv-menu{font-size:8px;gap:3px}.tv-menu>*{padding:4px}.tv-tiles{gap:4px}.tv-tile{font-size:9px}.stream-box{height:32px;font-size:12px}.remote-control{height:22px;font-size:6px}.phone-device{border-width:3px;border-radius:14px;font-size:7px;gap:7px;padding:15px 5px 5px}.phone-device b{font-size:8px}.phone-device strong{padding:4px 2px}}
