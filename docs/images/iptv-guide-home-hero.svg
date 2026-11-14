@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">IPTV guide across connected devices</title>
+<desc id="desc">A modern television displaying a neutral programme interface, with a streaming device, remote control and connected mobile screen.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10203c"/><stop offset=".55" stop-color="#174d78"/><stop offset="1" stop-color="#167b79"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d3557"/><stop offset="1" stop-color="#0c1729"/></linearGradient>
+ <linearGradient id="tile1"><stop stop-color="#65c5bd"/><stop offset="1" stop-color="#2c7892"/></linearGradient>
+ <linearGradient id="tile2"><stop stop-color="#e8b66b"/><stop offset="1" stop-color="#b96c59"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#061426" flood-opacity=".35"/></filter>
+</defs>
+<rect width="1200" height="820" rx="42" fill="url(#bg)"/>
+<circle cx="1010" cy="145" r="170" fill="#b4eee0" opacity=".08"/><circle cx="190" cy="690" r="210" fill="#b4eee0" opacity=".07"/>
+<g opacity=".24" stroke="#c9fff0" stroke-width="2" fill="none"><path d="M70 190h190m-130 28h130M900 680h210m-150 28h150"/><circle cx="1030" cy="320" r="54"/><circle cx="1030" cy="320" r="80"/></g>
+<!-- television -->
+<g filter="url(#shadow)">
+ <rect x="105" y="105" width="860" height="515" rx="34" fill="#091321" stroke="#a8d8d3" stroke-width="9"/>
+ <rect x="128" y="128" width="814" height="468" rx="20" fill="url(#screen)"/>
+ <rect x="160" y="160" width="750" height="54" rx="12" fill="#203c5b"/>
+ <circle cx="190" cy="187" r="9" fill="#70d1c3"/><rect x="216" y="179" width="116" height="15" rx="7" fill="#d9edf0" opacity=".85"/>
+ <rect x="760" y="179" width="116" height="15" rx="7" fill="#9eb6cb" opacity=".7"/>
+ <rect x="160" y="244" width="355" height="190" rx="18" fill="url(#tile1)"/>
+ <path d="M160 368q110-120 210-34t145-10v110H160z" fill="#0b344b" opacity=".5"/>
+ <circle cx="426" cy="293" r="35" fill="#e8fff7" opacity=".18"/>
+ <path d="M385 309l47-28-47-28z" fill="#fff"/>
+ <rect x="535" y="244" width="375" height="88" rx="16" fill="#d8e7f4" opacity=".13"/>
+ <rect x="560" y="266" width="130" height="12" rx="6" fill="#c6e6e3"/>
+ <rect x="560" y="290" width="220" height="9" rx="4" fill="#8fa9c0"/>
+ <rect x="535" y="346" width="178" height="88" rx="16" fill="url(#tile2)"/>
+ <rect x="730" y="346" width="180" height="88" rx="16" fill="#315d7a"/>
+ <rect x="160" y="455" width="235" height="112" rx="14" fill="#315d7a"/>
+ <rect x="410" y="455" width="235" height="112" rx="14" fill="#35536e"/>
+ <rect x="660" y="455" width="250" height="112" rx="14" fill="#285a64"/>
+ <g fill="#e9f5f7" opacity=".8"><rect x="181" y="478" width="105" height="9" rx="4"/><rect x="181" y="498" width="160" height="7" rx="3"/><rect x="431" y="478" width="105" height="9" rx="4"/><rect x="431" y="498" width="160" height="7" rx="3"/><rect x="681" y="478" width="105" height="9" rx="4"/><rect x="681" y="498" width="160" height="7" rx="3"/></g>
+ <path d="M450 620v40m170-40v40m-235 0h300" stroke="#9bc8cb" stroke-width="12" stroke-linecap="round"/>
+</g>
+<!-- mobile device -->
+<g filter="url(#shadow)" transform="rotate(8 1000 560)">
+ <rect x="910" y="390" width="205" height="350" rx="30" fill="#081525" stroke="#c6eee4" stroke-width="7"/>
+ <rect x="927" y="414" width="171" height="302" rx="18" fill="#eaf3f6"/>
+ <rect x="946" y="445" width="132" height="90" rx="10" fill="url(#tile1)"/>
+ <rect x="946" y="551" width="132" height="12" rx="6" fill="#7f9aad"/>
+ <rect x="946" y="575" width="92" height="9" rx="4" fill="#b3c3cf"/>
+ <rect x="946" y="607" width="132" height="12" rx="6" fill="#7f9aad"/>
+ <rect x="946" y="631" width="110" height="9" rx="4" fill="#b3c3cf"/>
+ <circle cx="1012" cy="697" r="5" fill="#8ba4b8"/>
+</g>
+<!-- remote -->
+<g transform="rotate(-18 170 650)" filter="url(#shadow)">
+ <rect x="100" y="600" width="100" height="205" rx="42" fill="#111d2c" stroke="#a8d8d3" stroke-width="5"/>
+ <circle cx="150" cy="645" r="19" fill="#31536c"/><circle cx="150" cy="645" r="7" fill="#a9e8dc"/>
+ <g fill="#7794a9"><circle cx="130" cy="694" r="7"/><circle cx="170" cy="694" r="7"/><circle cx="130" cy="724" r="7"/><circle cx="170" cy="724" r="7"/></g>
+</g>
+<g fill="#e7fbf5" opacity=".9"><circle cx="1080" cy="95" r="5"/><circle cx="1110" cy="120" r="3"/><circle cx="80" cy="360" r="4"/></g>
+</svg>
