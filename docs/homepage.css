@@ -103,3 +103,48 @@ body.home-page .nav{min-height:66px}
 body.home-page .hero.reference-hero>.hero-layout.wrap{min-height:464px}
 body.home-page .reference-card{box-shadow:0 7px 20px rgba(16,38,74,.10)}
 body.home-page .reference-card .card-art{flex:none}
+
+/* Cinematic TV dashboard hero — inspired by the supplied visual reference */
+body.home-page .hero-art{height:464px;min-height:464px;background:radial-gradient(ellipse at 60% 54%,#78b8ff 0%,#c5e0ff 48%,#eaf4ff 78%,transparent 100%)}
+body.home-page .hero-tv-stage{position:relative;width:100%;max-width:760px;height:440px;margin:auto}
+body.home-page .hero-tv-frame{position:absolute;top:3%;left:5%;width:88%;height:78%;padding:8px;border:7px solid #111a2a;border-radius:14px;background:#020b1c;box-shadow:0 24px 38px #081c3d66;transform:perspective(1200px) rotateY(-4deg)}
+body.home-page .hero-tv-ui{height:100%;overflow:hidden;padding:13px 15px;border-radius:5px;background:linear-gradient(145deg,#06172f,#03102a 65%,#071d3c);color:#f6f9ff}
+body.home-page .screen-nav{height:16%;display:flex;align-items:center;gap:13px;border-bottom:1px solid #243b5b}
+body.home-page .screen-brand{display:flex;align-items:center;gap:7px;margin-right:auto;font-size:13px;white-space:nowrap}
+body.home-page .screen-brand-mark{display:grid;place-items:center;width:23px;height:23px;border-radius:6px;background:#08a9cf;color:#fff;font-size:10px}
+body.home-page .screen-brand i{display:block;color:#8ca9d1;font-size:7px;font-style:normal;letter-spacing:1px}
+body.home-page .screen-links{display:flex;align-items:center;gap:12px;color:#d5e1f4;font-size:9px}
+body.home-page .screen-links b{padding:7px 11px;border-radius:18px;background:#0878f5;color:#fff}
+body.home-page .screen-search,body.home-page .screen-settings{font-size:17px;color:#c9d9ee}
+body.home-page .screen-feature-row{height:39%;display:grid;grid-template-columns:1.2fr 1fr;gap:8px;padding-top:9px}
+body.home-page .feature-poster{position:relative;display:flex;flex-direction:column;justify-content:end;overflow:hidden;padding:11px;border:1px solid #24476f;border-radius:8px;text-shadow:0 2px 5px #000}
+body.home-page .feature-poster:before{position:absolute;inset:0;z-index:0;content:""}
+body.home-page .feature-poster>*{position:relative;z-index:1}
+body.home-page .poster-film:before{background:linear-gradient(110deg,#081c36aa,#081c3670),radial-gradient(ellipse at 80% 25%,#d68a52,#3c405f 38%,#081b36 75%)}
+body.home-page .poster-sport:before{background:linear-gradient(110deg,#071b35aa,#071b3540),radial-gradient(ellipse at 70% 35%,#5fc7ff,#124b8a 43%,#06162e 76%)}
+body.home-page .poster-kicker{font-size:7px;letter-spacing:1.4px;color:#a8d7ff}
+body.home-page .feature-poster strong{font-size:clamp(15px,2vw,25px);line-height:1.03;letter-spacing:-.5px}
+body.home-page .feature-poster small{margin-top:5px;color:#d8e7fa;font-size:8px}
+body.home-page .screen-categories{height:19%;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;align-items:center}
+body.home-page .screen-categories span{display:flex;align-items:center;justify-content:center;height:55%;border-radius:6px;color:#fff;font-size:9px;font-weight:750;white-space:nowrap}
+body.home-page .cat-live{background:linear-gradient(110deg,#087cf4,#063d9b)}
+body.home-page .cat-movies{background:linear-gradient(110deg,#ed2550,#77153d)}
+body.home-page .cat-series{background:linear-gradient(110deg,#7637e8,#252b83)}
+body.home-page .cat-sports{background:linear-gradient(110deg,#08a875,#075d53)}
+body.home-page .trending-label{height:7%;font-size:9px;font-weight:800;color:#f1f6ff}
+body.home-page .screen-thumbnails{height:19%;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+body.home-page .thumb{display:flex;flex-direction:column;justify-content:end;overflow:hidden;padding:7px;border-radius:5px;background:linear-gradient(145deg,#153d6d,#08152d);box-shadow:inset 0 -25px 25px #02091699}
+body.home-page .thumb b{font-size:12px;letter-spacing:.5px}
+body.home-page .thumb small{font-size:6px;letter-spacing:1px;color:#c2d9f7}
+body.home-page .thumb-one{background:linear-gradient(145deg,#1376ba,#081a3b 75%)}
+body.home-page .thumb-two{background:linear-gradient(145deg,#d17a3c,#172d4c 75%)}
+body.home-page .thumb-three{background:linear-gradient(145deg,#167b91,#091a3b 75%)}
+body.home-page .thumb-four{background:linear-gradient(145deg,#16a17e,#092a4c 75%)}
+body.home-page .tv-stand{position:absolute;top:80%;left:39%;width:29%;height:22px;background:linear-gradient(#334b66,#101a29);clip-path:polygon(38% 0,62% 0,100% 100%,0 100%)}
+body.home-page .hero-stream-box{position:absolute;left:7%;bottom:7%;width:27%;height:47px;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:9px;background:linear-gradient(145deg,#263b52,#060d18);box-shadow:0 12px 20px #061b3e66;color:#0d85ff;font-size:16px}
+body.home-page .hero-stream-box span{width:7px;height:7px;border-radius:50%;background:#18b9ff;box-shadow:0 0 10px #18b9ff}
+body.home-page .hero-remote{position:absolute;left:42%;bottom:5%;width:25%;height:29px;display:flex;align-items:center;justify-content:space-around;padding:0 8px;border-radius:18px;background:linear-gradient(100deg,#080d15,#455267,#080d15);box-shadow:0 8px 13px #07152c77;transform:rotate(9deg)}
+body.home-page .hero-remote i{width:5px;height:5px;border-radius:50%;background:#aebdd0}
+body.home-page .hero-remote b{color:#e5edf8;font-size:9px}
+@media(max-width:720px){body.home-page .hero-art{height:300px;min-height:300px}body.home-page .hero-tv-stage{height:295px;width:min(100%,570px)}body.home-page .hero-tv-frame{left:4%;width:91%;height:76%;padding:5px;border-width:5px}body.home-page .hero-tv-ui{padding:8px}body.home-page .screen-nav{gap:6px}body.home-page .screen-brand{font-size:9px}body.home-page .screen-brand-mark{width:17px;height:17px}body.home-page .screen-links{gap:5px;font-size:6px}body.home-page .screen-links b{padding:5px 7px}body.home-page .screen-search,body.home-page .screen-settings{font-size:12px}body.home-page .screen-feature-row{gap:5px;padding-top:6px}body.home-page .feature-poster{padding:7px}body.home-page .feature-poster strong{font-size:15px}body.home-page .screen-categories{gap:4px}body.home-page .screen-categories span{font-size:7px}body.home-page .screen-thumbnails{gap:4px}body.home-page .thumb{padding:4px}body.home-page .thumb b{font-size:9px}body.home-page .hero-stream-box{height:31px;font-size:11px}body.home-page .hero-remote{height:20px}}
+@media(max-width:560px){body.home-page .hero-art{height:260px;min-height:260px}body.home-page .hero-tv-stage{height:255px}body.home-page .screen-links span:nth-child(n+3){display:none}body.home-page .hero-remote{width:24%}}
