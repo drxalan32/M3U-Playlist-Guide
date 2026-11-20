@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M3U Playlist Validator | IPTV Guide UK</title>
+<meta name="description" content="Check M3U and M3U8 playlist structure, entry metadata, URL syntax and duplicates locally in your browser.">
+<link rel="canonical" href="https://drxalan32.github.io/M3U-Playlist-Guide/tools/m3u-validator.html">
+<meta property="og:title" content="M3U Playlist Validator | IPTV Guide UK">
+<meta property="og:description" content="Check M3U and M3U8 playlist structure, entry metadata, URL syntax and duplicates locally in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drxalan32.github.io/M3U-Playlist-Guide/tools/m3u-validator.html">
+<meta property="og:image" content="https://drxalan32.github.io/M3U-Playlist-Guide/thumbnail%20iptv%20guide%20uk.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="M3U Playlist Validator | IPTV Guide UK">
+<meta name="twitter:description" content="Check M3U playlist structure, URL syntax and duplicates locally in your browser.">
+<meta name="twitter:image" content="https://drxalan32.github.io/M3U-Playlist-Guide/thumbnail%20iptv%20guide%20uk.jpg">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#071b49">
+<style>
+.validator-panel{margin-top:22px}.validator-panel label{display:block;font-weight:700;margin:14px 0 6px}.validator-panel textarea,.validator-panel input[type=file]{display:block;width:100%;font:inherit}.validator-panel textarea{min-height:260px;padding:13px;border:1px solid #cbd5e1;border-radius:8px;resize:vertical}.validator-panel input[type=file]{padding:10px;border:1px solid #cbd5e1;border-radius:8px;background:#fff}.validator-panel button{margin:14px 10px 0 0;padding:11px 16px;border:0;border-radius:8px;background:#1264d6;color:#fff;font:inherit;font-weight:700;cursor:pointer}.validator-panel button:focus-visible,.validator-panel textarea:focus-visible,.validator-panel input:focus-visible{outline:3px solid #86b7ff;outline-offset:2px}.validator-panel button:disabled{opacity:.55;cursor:wait}.validator-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.validator-stat{padding:14px;border:1px solid #e5eaf2;border-radius:10px;background:#f8fafc}.validator-stat strong{display:block;font-size:24px}.validator-stat span{font-size:13px;color:#64748b}.validator-problems{padding-left:22px}.validator-problems li{overflow-wrap:anywhere;margin:8px 0}.validator-problems .error{color:#a32121}.validator-problems .warning{color:#8a5a00}.validator-output{margin-top:18px;padding:16px;border:1px solid #e5eaf2;border-radius:10px;background:#fff}.validator-clean{width:100%;min-height:180px;margin-top:12px;padding:12px;font:13px/1.5 ui-monospace,monospace;border:1px solid #cbd5e1;border-radius:8px}.validator-help{font-size:13px;color:#64748b}@media(max-width:600px){.validator-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="logo" href="../index.html"><span class="brand-icon">▶</span><span>M3U Playlist Guide</span></a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#guides">Guides⌄</a><a class="active" href="../tools.html">Tools⌄</a><a href="../kemo-tv/">IPTV⌄</a><a href="../about.html">About</a></nav><div class="nav-actions"><a class="nav-kemo" href="../kemo-tv/"><span>▣</span> Kemo TV</a></div></div></header>
+<main class="wrap guide-main"><article class="article guide-article">
+<div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../tools.html">Tools</a> / M3U Validator</div>
+<h1>M3U Playlist Validator</h1>
+<p>Paste an M3U playlist or select a local <code>.m3u</code> or <code>.m3u8</code> file to check its structure, entries, URLs, metadata and duplicate locations.</p>
+<p class="note">Privacy: validation and cleanup run locally in this browser. The tool makes no network requests and does not contact stream URLs, upload your playlist or test playback. Avoid using it on a shared device if your playlist contains private credentials.</p>
+<section class="panel validator-panel" aria-labelledby="validator-input-heading">
+<h2 id="validator-input-heading">Playlist input</h2>
+<label for="playlist-file">Choose a playlist file</label>
+<input id="playlist-file" type="file" accept=".m3u,.m3u8,audio/x-mpegurl,application/vnd.apple.mpegurl">
+<label for="playlist-text">Or paste playlist text</label>
+<textarea id="playlist-text" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="#EXTM3U&#10;#EXTINF:-1 tvg-id=&quot;example&quot; group-title=&quot;News&quot;,Example Channel&#10;https://example.com/authorised-stream.m3u8"></textarea>
+<p class="validator-help">Large files are processed in small batches so the page can remain responsive. No playlist content is sent to a server.</p>
+<button id="validate-playlist" type="button">Validate playlist</button>
+<button id="copy-cleaned" type="button" disabled>Copy cleaned playlist</button>
+<div id="validator-status" role="status" aria-live="polite">Choose a file or paste playlist text to begin.</div>
+</section>
+<section class="validator-output" aria-labelledby="validator-results-heading">
+<h2 id="validator-results-heading">Validation results</h2>
+<div class="validator-summary" aria-live="polite">
+<div class="validator-stat"><strong id="total-entries">0</strong><span>Total entries</span></div>
+<div class="validator-stat"><strong id="valid-entries">0</strong><span>Valid entries</span></div>
+<div class="validator-stat"><strong id="warning-count">0</strong><span>Warnings</span></div>
+<div class="validator-stat"><strong id="error-count">0</strong><span>Errors</span></div>
+</div>
+<h3>Problems found</h3>
+<ul id="problem-list" class="validator-problems"><li>No validation has been run yet.</li></ul>
+<label for="cleaned-playlist">Cleaned playlist preview</label>
+<textarea id="cleaned-playlist" class="validator-clean" readonly spellcheck="false" aria-describedby="cleaned-help"></textarea>
+<p id="cleaned-help" class="validator-help">Cleanup removes blank lines and exact duplicate URL entries with their associated entry metadata. Review the result before using it.</p>
+</section>
+<section class="related-guides"><h2>Related guides</h2><ul><li><a href="../guides/m3u-playlist-not-loading.html">M3U playlist not loading: step-by-step fixes</a></li><li><a href="../guides/m3u-playlist-guide.html">M3U playlist format and tags</a></li><li><a href="../guides/m3u-url-vs-xtream-codes.html">M3U URL vs Xtream Codes</a></li></ul></section>
+</article></main>
+<footer class="footer"><div class="wrap">IPTV Guide UK · Practical IPTV information · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy.html">Privacy</a></div></footer>
+<script>
+(function(){
+"use strict";
+const byId=id=>document.getElementById(id);
+const input=byId("playlist-text"),file=byId("playlist-file"),run=byId("validate-playlist"),copy=byId("copy-cleaned"),status=byId("validator-status");
+let sourceText="";
+function addProblem(list,type,line,message){list.push({type,line,message});}
+function firstCommaOutsideQuotes(value){let quoted=false;for(let i=0;i<value.length;i++){if(value[i]==='"')quoted=!quoted;else if(value[i]===","&&!quoted)return i;}return -1;}
+function isMediaUrl(value){try{const u=new URL(value);return ["http:","https:","rtmp:"].includes(u.protocol)&&!!u.hostname;}catch(e){return false;}}
+function renderProblems(problems){const list=byId("problem-list");list.replaceChildren();if(!problems.length){const li=document.createElement("li");li.textContent="No structural problems found.";list.append(li);return;}for(const p of problems){const li=document.createElement("li");li.className=p.type;li.textContent=(p.type==="error"?"Error":"Warning")+" · Line "+p.line+": "+p.message;list.append(li);}}
+function makeCleaned(lines){const output=[],seen=new Set();let pending=[];for(const raw of lines){const line=raw.trim();if(!line)continue;if(line.startsWith("#")){if(/^#EXTINF:/i.test(line)){if(pending.length)output.push(...pending);pending=[raw];}else if(pending.length)pending.push(raw);else output.push(raw);continue;}if(seen.has(line)){pending=[];continue;}seen.add(line);if(pending.length){output.push(...pending);pending=[];}output.push(raw);}if(pending.length)output.push(...pending);return output.join("\n")+(output.length?"\n":"");}
+function validate(text){
+ return new Promise(resolve=>{
+  const original=text,hasBom=original.charCodeAt(0)===0xFEFF,hasWindows=/\r\n/.test(original),normal=original.replace(/^\uFEFF/,"").replace(/\r\n?/g,"\n"),lines=normal.split("\n"),problems=[],seen=new Set();
+  let total=0,valid=0,index=0,pending=null,headerSeen=false;
+  if(hasBom)addProblem(problems,"warning",1,"A UTF-8 BOM is present; it will be omitted from the cleaned output.");
+  if(hasWindows)addProblem(problems,"warning",1,"Windows CRLF line endings were found; line endings are normalised for checking.");
+  const first=lines.find(x=>x.trim()!=="");
+  if(!first||!/^#EXTM3U(?:\s|$)/i.test(first.trim()))addProblem(problems,"error",1,"The first non-empty line must start with #EXTM3U.");
+  const processBatch=()=>{
+   const stop=Math.min(index+2500,lines.length);
+   for(;index<stop;index++){
+    const raw=lines[index],line=raw.trim(),lineNo=index+1;
+    if(!line){if(raw!=="")addProblem(problems,"warning",lineNo,"Blank or whitespace-only line.");continue;}
+    if(/^#EXTM3U(?:\s|$)/i.test(line)){if(headerSeen)addProblem(problems,"warning",lineNo,"Additional #EXTM3U header.");headerSeen=true;continue;}
+    if(/^#EXTINF:/i.test(line)){
+     total++;
+     if(pending)addProblem(problems,"error",pending.line,"This #EXTINF entry is not followed by a media URL before the next #EXTINF.");
+     const duration=line.match(/^#EXTINF:\s*(-?\d+(?:\.\d+)?)/i),comma=firstCommaOutsideQuotes(line),title=comma>=0?line.slice(comma+1).trim():"";
+     if(!duration)addProblem(problems,"error",lineNo,"#EXTINF is missing a valid numeric duration.");
+     if(!title)addProblem(problems,"error",lineNo,"#EXTINF is missing a title after the first comma outside quotes.");
+     const attrs=["tvg-id","tvg-name","tvg-logo","group-title"],missing=attrs.filter(a=>!new RegExp("(?:^|\\s)"+a+"\\s*=","i").test(line));
+     if(missing.length)addProblem(problems,"warning",lineNo,"Missing optional attributes: "+missing.join(", ")+".");
+     pending={line:lineNo,valid:!!duration&&!!title,entryUrl:null};
+     continue;
+    }
+    if(line.startsWith("#"))continue;
+    if(!isMediaUrl(line)){
+     addProblem(problems,"error",lineNo,"This line is not a valid absolute HTTP, HTTPS or RTMP URL.");
+     if(pending){pending=null;}
+     else addProblem(problems,"warning",lineNo,"This non-comment line does not follow an #EXTINF entry.");
+     continue;
+    }
+    if(seen.has(line))addProblem(problems,"warning",lineNo,"Exact duplicate URL.");
+    seen.add(line);
+    if(!pending){addProblem(problems,"warning",lineNo,"URL has no preceding #EXTINF entry.");continue;}
+    pending.entryUrl=line;
+    if(pending.valid)valid++;
+    pending=null;
+   }
+   if(index<lines.length){status.textContent="Checking lines "+index+" of "+lines.length+"…";setTimeout(processBatch,0);return;}
+   if(pending)addProblem(problems,"error",pending.line,"This #EXTINF entry has no following URL line.");
+   const errors=problems.filter(p=>p.type==="error").length,warnings=problems.filter(p=>p.type==="warning").length;
+   byId("total-entries").textContent=String(total);
+   byId("valid-entries").textContent=String(valid);
+   byId("warning-count").textContent=String(warnings);
+   byId("error-count").textContent=String(errors);
+   renderProblems(problems);
+   byId("cleaned-playlist").value=makeCleaned(lines);
+   copy.disabled=false;
+   status.textContent="Validation complete. "+total+" entries checked; "+errors+" errors and "+warnings+" warnings.";
+   resolve({total,valid,warnings,errors,problems});
+  };
+  setTimeout(processBatch,0);
+ });
+}
+file.addEventListener("change",async()=>{
+ const selected=file.files&&file.files[0];if(!selected)return;
+ try{sourceText=await selected.text();input.value=sourceText;status.textContent="Loaded "+selected.name+" ("+selected.size+" bytes). Select Validate playlist to check it.";}
+ catch(e){status.textContent="Could not read this file. Try a plain-text M3U or M3U8 file.";}
+});
+run.addEventListener("click",()=>{
+ sourceText=input.value;
+ if(!sourceText.trim()){status.textContent="Paste playlist text or choose a file first.";return;}
+ run.disabled=true;copy.disabled=true;status.textContent="Starting validation…";
+ validate(sourceText).finally(()=>{run.disabled=false;});
+});
+copy.addEventListener("click",async()=>{
+ const cleaned=byId("cleaned-playlist").value;if(!cleaned)return;
+ try{await navigator.clipboard.writeText(cleaned);status.textContent="Cleaned playlist copied to the clipboard.";}
+ catch(e){const output=byId("cleaned-playlist");output.focus();output.select();status.textContent="Clipboard access was unavailable. The cleaned playlist is selected; copy it using your device's copy command.";}
+});
+})();
+</script>
+<script src="../analytics.js" defer></script>
+</body>
+</html>
