@@ -35,7 +35,7 @@ const get=n=>Number(document.getElementById(n).textContent);
 async function validate(name,text){
   input.value=text;
   status.textContent="";
-  await run.listeners.click();
+  run.listeners.click();
   for(let i=0;i<1000&&!status.textContent.startsWith("Validation complete.");i++) await new Promise(resolve=>setTimeout(resolve,2));
   assert.ok(status.textContent.startsWith("Validation complete."),name+": validator did not finish");
   const result={total:get("total-entries"),valid:get("valid-entries"),warnings:get("warning-count"),errors:get("error-count")};
@@ -44,7 +44,7 @@ async function validate(name,text){
 }
 const attrs='tvg-id="news" tvg-name="News" tvg-logo="https://example.com/logo.png" group-title="News"';
 (async()=>{
-  let r=await validate("valid",{toString(){return "#EXTM3U\n#EXTINF:-1 "+attrs+",BBC One\nhttps://example.com/bbc.m3u8\n";}});
+  let r=await validate("valid","#EXTM3U\n#EXTINF:-1 "+attrs+",BBC One\nhttps://example.com/bbc.m3u8\n");
   assert.deepEqual(r,{total:1,valid:1,warnings:0,errors:0});
   r=await validate("missing header","#EXTINF:-1 "+attrs+",BBC One\nhttps://example.com/bbc.m3u8\n");
   assert.equal(r.errors,1);assert.equal(r.valid,1);
