@@ -304,3 +304,33 @@ body.home-page a.reference-step-link:focus-visible{
   outline:3px solid #0864ed;
   outline-offset:5px;
 }
+
+
+/* Homepage M3U tool comparison */
+body.home-page .home-tool-comparison{margin:0 0 30px;padding:30px 32px 28px;border:1px solid #e2e9f3;border-radius:18px;background:#fff;box-shadow:0 7px 22px rgba(16,38,74,.06)}
+body.home-page .home-tool-comparison .section-heading{margin-bottom:20px}
+body.home-page .home-tool-comparison .section-heading h2{margin:4px 0 7px;color:#071633;font-size:clamp(25px,3vw,34px);line-height:1.2;letter-spacing:-.8px}
+body.home-page .home-tool-comparison .section-heading p{margin:0;color:#52627a;font-size:15px;line-height:1.55}
+body.home-page .comparison-table-wrap{width:100%;overflow-x:auto;border:1px solid #d7e0ec;border-radius:13px;scrollbar-width:thin}
+body.home-page .comparison-table{width:100%;min-width:690px;border-collapse:separate;border-spacing:0;text-align:center;color:#263854;font-size:14px}
+body.home-page .comparison-table th,body.home-page .comparison-table td{padding:14px 16px;border-bottom:1px solid #e2e8f0;line-height:1.4}
+body.home-page .comparison-table thead th{background:#f3f6fb;color:#14243d;font-size:14px;font-weight:800}
+body.home-page .comparison-table thead th:first-child{width:31%;text-align:left}
+body.home-page .comparison-table tbody th{background:#fff;color:#14243d;text-align:left;font-weight:650}
+body.home-page .comparison-table tbody td{background:#fff}
+body.home-page .comparison-table .featured-column{background:#f1f6ff;color:#0757bd}
+body.home-page .comparison-table tbody tr:last-child th,body.home-page .comparison-table tbody tr:last-child td{border-bottom:0}
+body.home-page .comparison-table .yes{color:#087bce;font-size:19px;font-weight:850}
+body.home-page .comparison-table .no{color:#bd4b4b;font-size:19px;font-weight:850}
+body.home-page .comparison-note{margin:14px 0 0;color:#64748b;font-size:12px;line-height:1.55}
+body.home-page .comparison-action{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:20px}
+body.home-page .comparison-cta{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:10px;background:#0864ed;color:#fff;font-size:14px;font-weight:800;text-decoration:none;box-shadow:0 5px 12px #0864ed25}
+body.home-page .comparison-cta:hover{background:#0755c8;text-decoration:none}
+body.home-page .comparison-guide-link{color:#075fcf;font-size:14px;font-weight:750;text-decoration:none}
+body.home-page .comparison-guide-link:hover{text-decoration:underline}
+body.home-page .comparison-cta:focus-visible,body.home-page .comparison-guide-link:focus-visible{outline:3px solid #0864ed;outline-offset:4px}
+@media(max-width:720px){
+ body.home-page .home-tool-comparison{padding:22px 16px}
+ body.home-page .comparison-table th,body.home-page .comparison-table td{padding:12px 11px;font-size:13px}
+ body.home-page .comparison-action{gap:13px}
+}
