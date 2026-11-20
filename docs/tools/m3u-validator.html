@@ -70,7 +70,7 @@ function addProblem(list,type,line,message){list.push({type,line,message});}
 function firstCommaOutsideQuotes(value){let quoted=false;for(let i=0;i<value.length;i++){if(value[i]==='"')quoted=!quoted;else if(value[i]===","&&!quoted)return i;}return -1;}
 function isMediaUrl(value){try{const u=new URL(value);return ["http:","https:","rtmp:"].includes(u.protocol)&&!!u.hostname;}catch(e){return false;}}
 function renderProblems(problems){const list=byId("problem-list");list.replaceChildren();if(!problems.length){const li=document.createElement("li");li.textContent="No structural problems found.";list.append(li);return;}for(const p of problems){const li=document.createElement("li");li.className=p.type;li.textContent=(p.type==="error"?"Error":"Warning")+" · Line "+p.line+": "+p.message;list.append(li);}}
-function makeCleaned(lines){const output=[],seen=new Set();let pending=[];for(const raw of lines){const line=raw.trim();if(!line)continue;if(line.startsWith("#")){if(/^#EXTINF:/i.test(line)){if(pending.length)output.push(...pending);pending=[raw];}else if(pending.length)pending.push(raw);else output.push(raw);continue;}if(seen.has(line)){pending=[];continue;}seen.add(line);if(pending.length){output.push(...pending);pending=[];}output.push(raw);}if(pending.length)output.push(...pending);return output.join("\n")+(output.length?"\n":"");}
+function makeCleaned(lines){const output=[],seen=new Set();let pending=[];for(const raw of lines){const line=raw.trim();if(!line)continue;if(line.startsWith("#")){if(/^#EXTINF:/i.test(line)){if(pending.length){for(const pendingLine of pending)output.push(pendingLine);}pending=[raw];}else if(pending.length)pending.push(raw);else output.push(raw);continue;}if(seen.has(line)){pending=[];continue;}seen.add(line);if(pending.length){for(const pendingLine of pending)output.push(pendingLine);pending=[];}output.push(raw);}if(pending.length){for(const pendingLine of pending)output.push(pendingLine);}return output.join("\n")+(output.length?"\n":"");}
 function validate(text){
  return new Promise(resolve=>{
   const original=text,hasBom=original.charCodeAt(0)===0xFEFF,hasWindows=/\r\n/.test(original),normal=original.replace(/^\uFEFF/,"").replace(/\r\n?/g,"\n"),lines=normal.split("\n"),problems=[],seen=new Set();
@@ -83,7 +83,7 @@ function validate(text){
    const stop=Math.min(index+2500,lines.length);
    for(;index<stop;index++){
     const raw=lines[index],line=raw.trim(),lineNo=index+1;
-    if(!line){if(raw!=="")addProblem(problems,"warning",lineNo,"Blank or whitespace-only line.");continue;}
+    if(!line){if(index<lines.length-1)addProblem(problems,"warning",lineNo,"Blank or whitespace-only line.");continue;}
     if(/^#EXTM3U(?:\s|$)/i.test(line)){if(headerSeen)addProblem(problems,"warning",lineNo,"Additional #EXTM3U header.");headerSeen=true;continue;}
     if(/^#EXTINF:/i.test(line)){
      total++;
