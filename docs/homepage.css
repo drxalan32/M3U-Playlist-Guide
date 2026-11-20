@@ -331,6 +331,22 @@ body.home-page .comparison-guide-link:hover{text-decoration:underline}
 body.home-page .comparison-cta:focus-visible,body.home-page .comparison-guide-link:focus-visible{outline:3px solid #0864ed;outline-offset:4px}
 @media(max-width:720px){
  body.home-page .home-tool-comparison{padding:22px 16px}
- body.home-page .comparison-table th,body.home-page .comparison-table td{padding:12px 11px;font-size:13px}
+ body.home-page .home-tool-comparison .section-heading h2{font-size:26px;line-height:1.18}
+ body.home-page .home-tool-comparison .section-heading p{font-size:14px}
+ body.home-page .comparison-table-wrap{overflow:visible;border:0;border-radius:0}
+ body.home-page .comparison-table{display:block;width:100%;min-width:0;font-size:13px}
+ body.home-page .comparison-table thead{display:none}
+ body.home-page .comparison-table tbody{display:grid;gap:11px}
+ body.home-page .comparison-table tbody tr{display:block;overflow:hidden;border:1px solid #d7e0ec;border-radius:11px;background:#fff}
+ body.home-page .comparison-table tbody th{display:block;padding:12px 13px;border-bottom:1px solid #e2e8f0;background:#f7f9fc;font-size:14px}
+ body.home-page .comparison-table tbody td{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 13px;border-bottom:1px solid #edf1f6;text-align:right;font-size:13px;line-height:1.35}
+ body.home-page .comparison-table tbody td:last-child{border-bottom:0}
+ body.home-page .comparison-table tbody td::before{flex:0 0 auto;color:#52627a;font-size:11px;font-weight:750;text-align:left}
+ body.home-page .comparison-table tbody td:nth-child(2)::before{content:"IPTV Guide UK"}
+ body.home-page .comparison-table tbody td:nth-child(3)::before{content:"Desktop software"}
+ body.home-page .comparison-table tbody td:nth-child(4)::before{content:"Text editor"}
+ body.home-page .comparison-table .featured-column{background:#f1f6ff}
+ body.home-page .comparison-table .yes,body.home-page .comparison-table .no{font-size:18px}
+ body.home-page .comparison-note{font-size:12px}
  body.home-page .comparison-action{gap:13px}
 }
