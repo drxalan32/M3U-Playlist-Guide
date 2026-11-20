@@ -55,8 +55,8 @@ const attrs='tvg-id="news" tvg-name="News" tvg-logo="https://example.com/logo.pn
   const cleaned=document.getElementById("cleaned-playlist").value;
   assert.equal((cleaned.match(/https:\/\/example\.com\/bbc\.m3u8/g)||[]).length,1);
   console.log("PASS cleaned output removes the exact duplicate entry and its EXTINF line");
-  const many=Array.from({length:25000},(_,i)=>"#EXTINF:-1 "+attrs+",Channel "+i+"\\nhttps://example.com/channel-"+i+".m3u8").join("\\n");
-  r=await validate("50k-line input","#EXTM3U\\n"+many+"\\n");
+  const many=Array.from({length:25000},(_,i)=>"#EXTINF:-1 "+attrs+",Channel "+i+"\nhttps://example.com/channel-"+i+".m3u8").join("\n");
+  r=await validate("50k-line input","#EXTM3U\n"+many+"\n");
   assert.deepEqual(r,{total:25000,valid:25000,warnings:0,errors:0});
   console.log("PASS 50,001-line input is processed in batches");
 })().catch(error=>{console.error(error);process.exitCode=1;});
