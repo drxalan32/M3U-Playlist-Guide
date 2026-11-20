@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">Example M3U playlist text structure</title><desc id="desc">A code editor illustration showing an EXTM3U header, an EXTINF metadata line, and a reserved example URL.</desc>
+<rect width="1200" height="560" rx="24" fill="#0f1c31"/><rect x="34" y="34" width="1132" height="492" rx="16" fill="#fff"/>
+<path d="M34 50a16 16 0 0 1 16-16h1100a16 16 0 0 1 16 16v62H34z" fill="#e9eef5"/>
+<circle cx="70" cy="73" r="9" fill="#ef6a64"/><circle cx="101" cy="73" r="9" fill="#f3bd4f"/><circle cx="132" cy="73" r="9" fill="#5ac18b"/>
+<text x="180" y="82" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#334155">example-playlist.m3u</text>
+<rect x="34" y="112" width="76" height="414" fill="#f3f6fa"/>
+<g font-family="monospace" font-size="22" fill="#64748b" text-anchor="end"><text x="88" y="174">1</text><text x="88" y="232">2</text><text x="88" y="290">3</text><text x="88" y="348">4</text></g>
+<g font-family="monospace" font-size="22"><text x="140" y="174" fill="#1264d6" font-weight="700">#EXTM3U</text><text x="140" y="232" fill="#8b5cf6">#EXTINF:-1 tvg-id="example.news" group-title="News",Example News</text><text x="140" y="290" fill="#0f766e">https://example.com/authorised-stream.m3u8</text><text x="140" y="348" fill="#64748b"># A comment line may appear between entries</text></g>
+<rect x="130" y="395" width="1000" height="82" rx="10" fill="#eff6ff"/><text x="160" y="430" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#1e40af">Remember</text><text x="160" y="458" font-family="Arial,sans-serif" font-size="17" fill="#334155">This is a format example only. example.com is illustrative; the URL is not a working stream.</text></svg>
