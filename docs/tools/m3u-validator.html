@@ -65,82 +65,173 @@
 "use strict";
 const byId=id=>document.getElementById(id);
 const input=byId("playlist-text"),file=byId("playlist-file"),run=byId("validate-playlist"),copy=byId("copy-cleaned"),status=byId("validator-status");
-let sourceText="";
-function addProblem(list,type,line,message){list.push({type,line,message});}
-function firstCommaOutsideQuotes(value){let quoted=false;for(let i=0;i<value.length;i++){if(value[i]==='"')quoted=!quoted;else if(value[i]===","&&!quoted)return i;}return -1;}
-function isMediaUrl(value){try{const u=new URL(value);return ["http:","https:","rtmp:"].includes(u.protocol)&&!!u.hostname;}catch(e){return false;}}
-function renderProblems(problems){const list=byId("problem-list");list.replaceChildren();if(!problems.length){const li=document.createElement("li");li.textContent="No structural problems found.";list.append(li);return;}for(const p of problems){const li=document.createElement("li");li.className=p.type;li.textContent=(p.type==="error"?"Error":"Warning")+" · Line "+p.line+": "+p.message;list.append(li);}}
-function makeCleaned(lines){const output=[],seen=new Set();let pending=[];for(const raw of lines){const line=raw.trim();if(!line)continue;if(line.startsWith("#")){if(/^#EXTINF:/i.test(line)){if(pending.length){for(const pendingLine of pending)output.push(pendingLine);}pending=[raw];}else if(pending.length)pending.push(raw);else output.push(raw);continue;}if(seen.has(line)){pending=[];continue;}seen.add(line);if(pending.length){for(const pendingLine of pending)output.push(pendingLine);pending=[];}output.push(raw);}if(pending.length){for(const pendingLine of pending)output.push(pendingLine);}return output.join("\n")+(output.length?"\n":"");}
+const MAX_VISIBLE_PROBLEMS=300;
+function isMediaUrl(value){
+ try{const u=new URL(value);return ["http:","https:","rtmp:"].includes(u.protocol)&&!!u.hostname&&!!u.host;}
+ catch(e){return false;}
+}
+function firstCommaOutsideQuotes(value){
+ let quoted=false;
+ for(let i=0;i<value.length;i++){
+  if(value[i]==='"')quoted=!quoted;
+  else if(value[i]===","&&!quoted)return i;
+ }
+ return -1;
+}
+function buildCleaned(lines){
+ const output=[],seen=new Set();
+ let pending=[];
+ const flushPending=()=>{if(pending.length)output.push(...pending);pending=[];};
+ for(const raw of lines){
+  const line=raw.trim();
+  if(!line)continue;
+  if(/^#EXTINF:/i.test(line)){
+   flushPending();
+   pending=[line];
+   continue;
+  }
+  if(line.startsWith("#")){
+   if(pending.length)pending.push(line);
+   else output.push(line);
+   continue;
+  }
+  if(seen.has(line)){pending=[];continue;}
+  seen.add(line);
+  if(pending.length){output.push(...pending);pending=[];}
+  output.push(line);
+ }
+ flushPending();
+ return output.join("\n")+(output.length?"\n":"");
+}
+function renderProblems(problems,totalProblems){
+ const list=byId("problem-list");
+ list.replaceChildren();
+ if(!problems.length){
+  const li=document.createElement("li");
+  li.textContent="No structural problems found.";
+  list.append(li);
+ }else{
+  const fragment=document.createDocumentFragment();
+  for(const p of problems){
+   const li=document.createElement("li");
+   li.className=p.type;
+   li.textContent=(p.type==="error"?"Error":"Warning")+" · Line "+p.line+": "+p.message;
+   fragment.append(li);
+  }
+  list.append(fragment);
+ }
+ if(totalProblems>problems.length){
+  const li=document.createElement("li");
+  li.textContent=(totalProblems-problems.length)+" additional findings were counted but not displayed to keep large-file results responsive.";
+  list.append(li);
+ }
+}
 function validate(text){
  return new Promise(resolve=>{
-  const original=text,hasBom=original.charCodeAt(0)===0xFEFF,hasWindows=/\r\n/.test(original),normal=original.replace(/^\uFEFF/,"").replace(/\r\n?/g,"\n"),lines=normal.split("\n"),problems=[],seen=new Set();
-  let total=0,valid=0,index=0,pending=null,headerSeen=false;
-  if(hasBom)addProblem(problems,"warning",1,"A UTF-8 BOM is present; it will be omitted from the cleaned output.");
-  if(hasWindows)addProblem(problems,"warning",1,"Windows CRLF line endings were found; line endings are normalised for checking.");
+  const original=text;
+  const hasBom=original.charCodeAt(0)===0xFEFF;
+  const hasWindows=/\r\n/.test(original);
+  const normal=original.replace(/^\uFEFF/,"").replace(/\r\n?/g,"\n");
+  const lines=normal.split("\n");
+  const problems=[],seen=new Set();
+  let errors=0,warnings=0,total=0,valid=0,index=0,pending=null,headerSeen=false;
+  const add=(type,line,message)=>{
+   if(type==="error")errors++;else warnings++;
+   if(problems.length<MAX_VISIBLE_PROBLEMS)problems.push({type,line,message});
+  };
+  if(hasBom)add("warning",1,"A UTF-8 BOM is present; it will be removed from the cleaned output.");
+  if(hasWindows)add("warning",1,"Windows CRLF line endings were found; they are normalised during checking.");
   const first=lines.find(x=>x.trim()!=="");
-  if(!first||!/^#EXTM3U(?:\s|$)/i.test(first.trim()))addProblem(problems,"error",1,"The first non-empty line must start with #EXTM3U.");
+  if(!first||!/^#EXTM3U(?:\s|$)/i.test(first.trim()))add("error",1,"The first non-empty line must start with #EXTM3U.");
   const processBatch=()=>{
-   const stop=Math.min(index+2500,lines.length);
+   const stop=Math.min(index+2000,lines.length);
    for(;index<stop;index++){
     const raw=lines[index],line=raw.trim(),lineNo=index+1;
-    if(!line){if(index<lines.length-1)addProblem(problems,"warning",lineNo,"Blank or whitespace-only line.");continue;}
-    if(/^#EXTM3U(?:\s|$)/i.test(line)){if(headerSeen)addProblem(problems,"warning",lineNo,"Additional #EXTM3U header.");headerSeen=true;continue;}
+    if(!line){
+     if(index<lines.length-1)add("warning",lineNo,"Blank or whitespace-only line.");
+     continue;
+    }
+    if(/^#EXTM3U(?:\s|$)/i.test(line)){
+     if(headerSeen)add("warning",lineNo,"Additional #EXTM3U header.");
+     headerSeen=true;
+     continue;
+    }
     if(/^#EXTINF:/i.test(line)){
      total++;
-     if(pending)addProblem(problems,"error",pending.line,"This #EXTINF entry is not followed by a media URL before the next #EXTINF.");
-     const duration=line.match(/^#EXTINF:\s*(-?\d+(?:\.\d+)?)/i),comma=firstCommaOutsideQuotes(line),title=comma>=0?line.slice(comma+1).trim():"";
-     if(!duration)addProblem(problems,"error",lineNo,"#EXTINF is missing a valid numeric duration.");
-     if(!title)addProblem(problems,"error",lineNo,"#EXTINF is missing a title after the first comma outside quotes.");
-     const attrs=["tvg-id","tvg-name","tvg-logo","group-title"],missing=attrs.filter(a=>!new RegExp("(?:^|\\s)"+a+"\\s*=","i").test(line));
-     if(missing.length)addProblem(problems,"warning",lineNo,"Missing optional attributes: "+missing.join(", ")+".");
-     pending={line:lineNo,valid:!!duration&&!!title,entryUrl:null};
+     if(pending)add("error",pending.line,"This #EXTINF entry is not followed by a media URL before the next #EXTINF.");
+     const duration=line.match(/^#EXTINF:\s*(-?\d+(?:\.\d+)?)/i);
+     const comma=firstCommaOutsideQuotes(line);
+     const title=comma>=0?line.slice(comma+1).trim():"";
+     if(!duration)add("error",lineNo,"#EXTINF is missing a valid numeric duration.");
+     if(!title)add("error",lineNo,"#EXTINF is missing a title after the comma.");
+     const attrs=["tvg-id","tvg-name","tvg-logo","group-title"];
+     const missing=attrs.filter(a=>!new RegExp("(?:^|\\s)"+a+"\\s*=","i").test(line));
+     if(missing.length)add("warning",lineNo,"Missing optional attributes: "+missing.join(", ")+".");
+     pending={line:lineNo,valid:!!duration&&!!title};
      continue;
     }
     if(line.startsWith("#"))continue;
     if(!isMediaUrl(line)){
-     addProblem(problems,"error",lineNo,"This line is not a valid absolute HTTP, HTTPS or RTMP URL.");
-     if(pending){pending=null;}
-     else addProblem(problems,"warning",lineNo,"This non-comment line does not follow an #EXTINF entry.");
+     add("error",lineNo,"This line is not a valid absolute HTTP, HTTPS or RTMP URL (or is stray text).");
+     if(pending)pending=null;
+     else add("warning",lineNo,"This non-comment line does not follow an #EXTINF entry.");
      continue;
     }
-    if(seen.has(line))addProblem(problems,"warning",lineNo,"Exact duplicate URL.");
+    const duplicate=seen.has(line);
+    if(duplicate)add("warning",lineNo,"Exact duplicate URL.");
     seen.add(line);
-    if(!pending){addProblem(problems,"warning",lineNo,"URL has no preceding #EXTINF entry.");continue;}
-    pending.entryUrl=line;
+    if(!pending){
+     add("warning",lineNo,"URL has no preceding #EXTINF entry.");
+     continue;
+    }
     if(pending.valid)valid++;
     pending=null;
    }
-   if(index<lines.length){status.textContent="Checking lines "+index+" of "+lines.length+"…";setTimeout(processBatch,0);return;}
-   if(pending)addProblem(problems,"error",pending.line,"This #EXTINF entry has no following URL line.");
-   const errors=problems.filter(p=>p.type==="error").length,warnings=problems.filter(p=>p.type==="warning").length;
+   if(index<lines.length){
+    status.textContent="Checking lines "+index+" of "+lines.length+"…";
+    setTimeout(processBatch,0);
+    return;
+   }
+   if(pending)add("error",pending.line,"This #EXTINF entry has no following URL line.");
    byId("total-entries").textContent=String(total);
    byId("valid-entries").textContent=String(valid);
    byId("warning-count").textContent=String(warnings);
    byId("error-count").textContent=String(errors);
-   renderProblems(problems);
-   byId("cleaned-playlist").value=makeCleaned(lines);
+   renderProblems(problems,errors+warnings);
+   byId("cleaned-playlist").value=buildCleaned(lines);
    copy.disabled=false;
    status.textContent="Validation complete. "+total+" entries checked; "+errors+" errors and "+warnings+" warnings.";
-   resolve({total,valid,warnings,errors,problems});
+   resolve({total,valid,warnings,errors});
   };
   setTimeout(processBatch,0);
  });
 }
 file.addEventListener("change",async()=>{
- const selected=file.files&&file.files[0];if(!selected)return;
- try{sourceText=await selected.text();input.value=sourceText;status.textContent="Loaded "+selected.name+" ("+selected.size+" bytes). Select Validate playlist to check it.";}
- catch(e){status.textContent="Could not read this file. Try a plain-text M3U or M3U8 file.";}
+ const selected=file.files&&file.files[0];
+ if(!selected)return;
+ try{
+  status.textContent="Reading "+selected.name+"…";
+  input.value=await selected.text();
+  status.textContent="Loaded "+selected.name+" ("+selected.size+" bytes). Select Validate playlist to check it.";
+ }catch(e){status.textContent="Could not read this file. Try a plain-text M3U or M3U8 file.";}
 });
 run.addEventListener("click",()=>{
- sourceText=input.value;
- if(!sourceText.trim()){status.textContent="Paste playlist text or choose a file first.";return;}
+ const text=input.value;
+ if(!text.trim()){status.textContent="Paste playlist text or choose a file first.";return;}
  run.disabled=true;copy.disabled=true;status.textContent="Starting validation…";
- validate(sourceText).finally(()=>{run.disabled=false;});
+ validate(text).finally(()=>{run.disabled=false;});
 });
 copy.addEventListener("click",async()=>{
- const cleaned=byId("cleaned-playlist").value;if(!cleaned)return;
- try{await navigator.clipboard.writeText(cleaned);status.textContent="Cleaned playlist copied to the clipboard.";}
- catch(e){const output=byId("cleaned-playlist");output.focus();output.select();status.textContent="Clipboard access was unavailable. The cleaned playlist is selected; copy it using your device's copy command.";}
+ const cleaned=byId("cleaned-playlist").value;
+ if(!cleaned)return;
+ try{
+  await navigator.clipboard.writeText(cleaned);
+  status.textContent="Cleaned playlist copied to the clipboard.";
+ }catch(e){
+  const output=byId("cleaned-playlist");
+  output.focus();output.select();
+  status.textContent="Clipboard access was unavailable. The cleaned playlist is selected; copy it using your device's copy command.";
+ }
 });
 })();
 </script>
