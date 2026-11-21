@@ -354,7 +354,7 @@ body.home-page .comparison-cta:focus-visible,body.home-page .comparison-guide-li
 
 /* Homepage featured sponsored provider panel */
 body.home-page .sponsored-feature{
-  margin:28px auto 30px;
+  margin:48px auto 30px;
   overflow:hidden;
   border:1px solid #cbd7e8;
   border-radius:20px;
@@ -471,7 +471,7 @@ body.home-page .sponsored-feature-disclosure{
   line-height:1.5;
 }
 @media(max-width:760px){
- body.home-page .sponsored-feature{margin:20px auto 24px;border-radius:16px}
+ body.home-page .sponsored-feature{margin:32px auto 24px;border-radius:16px}
  body.home-page .sponsored-feature-bar{min-height:48px;padding:0 16px}
  body.home-page .sponsored-feature-content{grid-template-columns:1fr;gap:20px;padding:23px 19px}
  body.home-page .sponsored-feature-copy h2{font-size:25px}
