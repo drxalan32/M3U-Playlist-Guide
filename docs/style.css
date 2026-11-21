@@ -611,3 +611,44 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-guide-content{grid-template-columns:1fr}
 .kemo-guide-visual{max-width:280px}
 @media(max-width:760px){.kemo-visual-steps{grid-template-columns:1fr}.kemo-step-figure{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}.kemo-step-figure figcaption{padding:12px}.kemo-step-figure svg{height:auto}}
+
+
+/* Smarters Pro visual setup article */
+.smarters-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:34px;border-radius:22px;background:linear-gradient(130deg,#f1f6ff,#fff);border:1px solid #dce6f3}
+.smarters-hero h1{font-size:clamp(32px,4.4vw,48px);line-height:1.1;margin:12px 0;color:#142744}
+.smarters-hero-copy>p{color:#526985;line-height:1.7}
+.smarters-hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:22px 0}
+.smarters-hero-actions a:not(.smarters-primary){font-weight:700}
+.smarters-primary{display:inline-block;padding:12px 17px;border-radius:9px;background:#0865d9;color:#fff!important;text-decoration:none;font-weight:750}
+.smarters-note{font-size:13px}
+.smarters-hero-photo{padding:12px;background:#fff;border:1px solid #dce6f3;border-radius:16px;box-shadow:0 10px 30px #12294b12}
+.smarters-hero-photo img{display:block;width:100%;border-radius:9px}
+.smarters-hero-photo small{display:block;color:#64748b;font-size:11px;margin:9px 3px 1px}
+.smarters-before{margin:28px 0;padding:24px;border:1px solid #dce6f3;border-radius:17px;background:#fff}
+.smarters-before h2{margin:0 0 16px}
+.smarters-before-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.smarters-before-grid article{padding:15px;border-radius:12px;background:#f5f8fd}
+.smarters-before-grid p{font-size:14px;line-height:1.6;color:#64748b;margin-bottom:0}
+.smarters-callout{display:flex;gap:12px;align-items:center;padding:15px 18px;border-radius:12px;background:#eaf3ff;color:#27486e;margin:26px 0}
+.smarters-callout span{font-size:14px}
+.smarters-section-heading{margin:44px 0 20px}
+.smarters-section-heading h2{font-size:31px;margin:8px 0}
+.smarters-section-heading p{color:#64748b}
+.smarters-step{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center;padding:24px 0;border-bottom:1px solid #e5ebf3;scroll-margin-top:90px}
+.smarters-step-copy{max-width:540px}
+.smarters-step-number{display:inline-grid;place-items:center;width:37px;height:37px;border-radius:50%;background:#e9f2ff;color:#0865d9;font-weight:850}
+.smarters-step h3{font-size:23px;line-height:1.25;color:#182e4d}
+.smarters-step p,.smarters-step li{color:#526985;line-height:1.7}
+.smarters-step figure{margin:0;padding:13px;border:1px solid #dce6f3;border-radius:15px;background:#f8faff}
+.smarters-step figure img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;border-radius:9px;background:#fff}
+.smarters-step figcaption{font-size:12px;line-height:1.5;color:#64748b;margin-top:10px}
+.smarters-m3u,.smarters-download{margin:28px 0;padding:24px;border:1px solid #dce6f3;border-radius:16px;background:#f8faff}
+.smarters-m3u p,.smarters-download p{color:#526985;line-height:1.7}
+.smarters-errors{margin:40px 0}
+.smarters-errors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.smarters-errors-grid article{padding:18px;border:1px solid #dce6f3;border-radius:13px;background:#fff}
+.smarters-errors-grid h3{font-size:16px;margin:0 0 8px}
+.smarters-errors-grid p{font-size:14px;line-height:1.6;color:#64748b;margin:0}
+.smarters-download>a{font-weight:750}
+@media(max-width:850px){.smarters-hero{grid-template-columns:1fr}.smarters-before-grid{grid-template-columns:1fr}.smarters-step{grid-template-columns:1fr}.smarters-step-copy{max-width:none}.smarters-step figure{max-width:650px}}
+@media(max-width:600px){.smarters-hero{padding:21px}.smarters-hero-actions{align-items:flex-start;flex-direction:column}.smarters-callout{align-items:flex-start;flex-direction:column}.smarters-errors-grid{grid-template-columns:1fr}.smarters-step{padding:18px 0}.smarters-step h3{font-size:20px}}
