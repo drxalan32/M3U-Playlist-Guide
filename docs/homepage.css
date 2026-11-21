@@ -350,3 +350,139 @@ body.home-page .comparison-cta:focus-visible,body.home-page .comparison-guide-li
  body.home-page .comparison-note{font-size:12px}
  body.home-page .comparison-action{gap:13px}
 }
+
+
+/* Homepage featured sponsored provider panel */
+body.home-page .sponsored-feature{
+  margin:28px auto 30px;
+  overflow:hidden;
+  border:1px solid #cbd7e8;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 12px 34px rgba(16,38,74,.09);
+}
+body.home-page .sponsored-feature-bar{
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:0 24px;
+  background:linear-gradient(100deg,#0758c9,#0875e8);
+  color:#fff;
+}
+body.home-page .sponsored-brand{font-size:16px;font-weight:850;letter-spacing:.2px}
+body.home-page .sponsored-pill{
+  padding:5px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.2);
+  color:#fff;
+  font-size:11px;
+  font-weight:850;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+body.home-page .sponsored-feature-close-label{margin-left:auto;color:#e6f0ff;font-size:12px;font-weight:650}
+body.home-page .sponsored-feature-content{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 245px;
+  align-items:center;
+  gap:30px;
+  padding:30px 34px 28px;
+}
+body.home-page .sponsored-feature-eyebrow{
+  margin:0 0 8px;
+  color:#075fcf;
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+}
+body.home-page .sponsored-feature-copy h2{
+  margin:0 0 10px;
+  color:#172033;
+  font-size:clamp(24px,2.5vw,31px);
+  line-height:1.2;
+  letter-spacing:-.8px;
+}
+body.home-page .sponsored-feature-copy>p:not(.sponsored-feature-eyebrow){
+  max-width:900px;
+  margin:0 0 18px;
+  color:#52627a;
+  font-size:16px;
+  line-height:1.6;
+}
+body.home-page .sponsored-feature-points{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:11px 24px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+body.home-page .sponsored-feature-points li{
+  position:relative;
+  padding-left:23px;
+  color:#35445b;
+  font-size:14px;
+  line-height:1.45;
+}
+body.home-page .sponsored-feature-points li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#0864dc;
+  font-weight:900;
+}
+body.home-page .sponsored-feature-action{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-align:center;
+}
+body.home-page .sponsored-feature-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  width:100%;
+  min-height:56px;
+  padding:13px 18px;
+  border-radius:999px;
+  background:#0864dc;
+  color:#fff;
+  font-size:16px;
+  font-weight:850;
+  text-decoration:none;
+  box-shadow:0 7px 17px rgba(8,100,220,.2);
+  transition:background .18s ease,transform .18s ease;
+}
+body.home-page .sponsored-feature-cta:hover{background:#0755bd;transform:translateY(-1px);text-decoration:none}
+body.home-page .sponsored-feature-cta:focus-visible{outline:3px solid #0b76e0;outline-offset:4px}
+body.home-page .sponsored-feature-action p{margin:0;color:#778399;font-size:12px;line-height:1.4}
+body.home-page .sponsored-feature-disclosure{
+  padding:13px 24px;
+  border-top:1px solid #dce4ef;
+  color:#778399;
+  font-size:12px;
+  font-style:italic;
+  line-height:1.5;
+}
+@media(max-width:760px){
+ body.home-page .sponsored-feature{margin:20px auto 24px;border-radius:16px}
+ body.home-page .sponsored-feature-bar{min-height:48px;padding:0 16px}
+ body.home-page .sponsored-feature-content{grid-template-columns:1fr;gap:20px;padding:23px 19px}
+ body.home-page .sponsored-feature-copy h2{font-size:25px}
+ body.home-page .sponsored-feature-copy>p:not(.sponsored-feature-eyebrow){font-size:14px}
+ body.home-page .sponsored-feature-points{grid-template-columns:1fr;gap:10px}
+ body.home-page .sponsored-feature-action{align-items:stretch}
+ body.home-page .sponsored-feature-cta{width:100%}
+ body.home-page .sponsored-feature-disclosure{padding:12px 16px}
+}
+@media(max-width:380px){
+ body.home-page .sponsored-feature-close-label{font-size:11px}
+ body.home-page .sponsored-feature-content{padding:20px 15px}
+ body.home-page .sponsored-feature-copy h2{font-size:22px}
+}
