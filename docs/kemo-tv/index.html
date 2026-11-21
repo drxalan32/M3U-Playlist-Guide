@@ -106,47 +106,82 @@
       <p class="kemo-glance-disclaimer">These are provider-published claims and have not been independently tested or verified by IPTV Guide UK. Features, availability and terms may change; confirm details directly with the provider.</p>
     </section>
 
-    <section class="kemo-channel-directory" id="kemo-channel-list" aria-labelledby="kemo-channel-title">
+    <section class="kemo-channel-directory kemo-country-directory" id="kemo-channel-list" aria-labelledby="kemo-channel-title">
       <div class="kemo-channel-heading">
         <div>
           <span class="kemo-section-kicker">EXPLORE THE LINE-UP</span>
           <h2 id="kemo-channel-title">Kemo TV Channel List</h2>
-          <p>Browse the country and content groups listed in the provider's channel guide.</p>
+          <p>Browse country and regional channel groups listed for the service.</p>
         </div>
         <a class="kemo-channel-source" href="https://kemoiptv.digital/channel-list" rel="sponsored nofollow noopener">Full channel information ↗</a>
       </div>
-      <div class="kemo-channel-summary"><strong>34,000+ live channels</strong><span>Advertised across country and category groups</span></div>
-      <div class="kemo-channel-controls">
-        <label class="kemo-channel-search">
-          <span class="sr-only">Search channel groups</span>
-          <span aria-hidden="true">⌕</span>
-          <input id="kemoChannelSearch" type="search" placeholder="Search a country or channel group…" autocomplete="off">
-        </label>
-        <div class="kemo-channel-filters" role="group" aria-label="Filter channel groups">
-          <button type="button" class="active" data-channel-filter="all" aria-pressed="true">All groups</button>
-          <button type="button" data-channel-filter="region" aria-pressed="false">Countries &amp; regions</button>
-          <button type="button" data-channel-filter="category" aria-pressed="false">Categories</button>
-        </div>
+      <label class="kemo-channel-search kemo-country-search">
+        <span class="sr-only">Search countries and channel groups</span>
+        <span aria-hidden="true">⌕</span>
+        <input id="kemoChannelSearch" type="search" placeholder="Search country or region…" autocomplete="off">
+      </label>
+      <div class="kemo-country-grid" id="kemoChannelGrid">
+        <article class="kemo-country-card" data-search="usa channels"><span class="kemo-country-flag" aria-hidden="true">🇺🇸</span><div class="kemo-country-copy"><h3>USA Channels</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="latino"><span class="kemo-country-flag" aria-hidden="true">🇲🇽</span><div class="kemo-country-copy"><h3>Latino</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="arab"><span class="kemo-country-flag" aria-hidden="true">🇦🇪</span><div class="kemo-country-copy"><h3>Arab</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="canada"><span class="kemo-country-flag" aria-hidden="true">🇨🇦</span><div class="kemo-country-copy"><h3>Canada</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="ex-yu"><span class="kemo-country-flag" aria-hidden="true">🇽🇰</span><div class="kemo-country-copy"><h3>EX-YU</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="india"><span class="kemo-country-flag" aria-hidden="true">🇮🇳</span><div class="kemo-country-copy"><h3>India</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="africa"><span class="kemo-country-flag" aria-hidden="true">🇿🇦</span><div class="kemo-country-copy"><h3>Africa</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="united kingdom"><span class="kemo-country-flag" aria-hidden="true">🇬🇧</span><div class="kemo-country-copy"><h3>United Kingdom</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="scandinavia"><span class="kemo-country-flag" aria-hidden="true">🇸🇪</span><div class="kemo-country-copy"><h3>Scandinavia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="usa without ppv"><span class="kemo-country-flag" aria-hidden="true">🇺🇸</span><div class="kemo-country-copy"><h3>USA without PPV</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="germany"><span class="kemo-country-flag" aria-hidden="true">🇩🇪</span><div class="kemo-country-copy"><h3>Germany</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="albania"><span class="kemo-country-flag" aria-hidden="true">🇦🇱</span><div class="kemo-country-copy"><h3>Albania</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="china"><span class="kemo-country-flag" aria-hidden="true">🇨🇳</span><div class="kemo-country-copy"><h3>China</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="poland"><span class="kemo-country-flag" aria-hidden="true">🇵🇱</span><div class="kemo-country-copy"><h3>Poland</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="france"><span class="kemo-country-flag" aria-hidden="true">🇫🇷</span><div class="kemo-country-copy"><h3>France</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="caribbean"><span class="kemo-country-flag" aria-hidden="true">🇯🇲</span><div class="kemo-country-copy"><h3>Caribbean</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="italy"><span class="kemo-country-flag" aria-hidden="true">🇮🇹</span><div class="kemo-country-copy"><h3>Italy</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="australia"><span class="kemo-country-flag" aria-hidden="true">🇦🇺</span><div class="kemo-country-copy"><h3>Australia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="spain"><span class="kemo-country-flag" aria-hidden="true">🇪🇸</span><div class="kemo-country-copy"><h3>Spain</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="portugal"><span class="kemo-country-flag" aria-hidden="true">🇵🇹</span><div class="kemo-country-copy"><h3>Portugal</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="romania"><span class="kemo-country-flag" aria-hidden="true">🇷🇴</span><div class="kemo-country-copy"><h3>Romania</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="turkey"><span class="kemo-country-flag" aria-hidden="true">🇹🇷</span><div class="kemo-country-copy"><h3>Turkey</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="indonesia"><span class="kemo-country-flag" aria-hidden="true">🇮🇩</span><div class="kemo-country-copy"><h3>Indonesia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="russia"><span class="kemo-country-flag" aria-hidden="true">🇷🇺</span><div class="kemo-country-copy"><h3>Russia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="hungary"><span class="kemo-country-flag" aria-hidden="true">🇭🇺</span><div class="kemo-country-copy"><h3>Hungary</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="pakistan"><span class="kemo-country-flag" aria-hidden="true">🇵🇰</span><div class="kemo-country-copy"><h3>Pakistan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="malaysia"><span class="kemo-country-flag" aria-hidden="true">🇲🇾</span><div class="kemo-country-copy"><h3>Malaysia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="greece"><span class="kemo-country-flag" aria-hidden="true">🇬🇷</span><div class="kemo-country-copy"><h3>Greece</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="netherlands"><span class="kemo-country-flag" aria-hidden="true">🇳🇱</span><div class="kemo-country-copy"><h3>Netherlands</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="bulgaria"><span class="kemo-country-flag" aria-hidden="true">🇧🇬</span><div class="kemo-country-copy"><h3>Bulgaria</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="croatia"><span class="kemo-country-flag" aria-hidden="true">🇭🇷</span><div class="kemo-country-copy"><h3>Croatia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="bosnia and herzegovina"><span class="kemo-country-flag" aria-hidden="true">🇧🇦</span><div class="kemo-country-copy"><h3>Bosnia & Herzegovina</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="czechia"><span class="kemo-country-flag" aria-hidden="true">🇨🇿</span><div class="kemo-country-copy"><h3>Czechia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="iran"><span class="kemo-country-flag" aria-hidden="true">🇮🇷</span><div class="kemo-country-copy"><h3>Iran</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="kurdistan"><span class="kemo-country-flag" aria-hidden="true">🇮🇶</span><div class="kemo-country-copy"><h3>Kurdistan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="north macedonia"><span class="kemo-country-flag" aria-hidden="true">🇲🇰</span><div class="kemo-country-copy"><h3>North Macedonia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="bangladesh"><span class="kemo-country-flag" aria-hidden="true">🇧🇩</span><div class="kemo-country-copy"><h3>Bangladesh</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="belgium"><span class="kemo-country-flag" aria-hidden="true">🇧🇪</span><div class="kemo-country-copy"><h3>Belgium</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="vietnam"><span class="kemo-country-flag" aria-hidden="true">🇻🇳</span><div class="kemo-country-copy"><h3>Vietnam</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="philippines"><span class="kemo-country-flag" aria-hidden="true">🇵🇭</span><div class="kemo-country-copy"><h3>Philippines</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="thailand"><span class="kemo-country-flag" aria-hidden="true">🇹🇭</span><div class="kemo-country-copy"><h3>Thailand</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="austria"><span class="kemo-country-flag" aria-hidden="true">🇦🇹</span><div class="kemo-country-copy"><h3>Austria</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="new zealand"><span class="kemo-country-flag" aria-hidden="true">🇳🇿</span><div class="kemo-country-copy"><h3>New Zealand</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="dominican republic"><span class="kemo-country-flag" aria-hidden="true">🇩🇴</span><div class="kemo-country-copy"><h3>Dominican Republic</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="korea"><span class="kemo-country-flag" aria-hidden="true">🇰🇷</span><div class="kemo-country-copy"><h3>Korea</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="suriname"><span class="kemo-country-flag" aria-hidden="true">🇸🇷</span><div class="kemo-country-copy"><h3>Suriname</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="ukraine"><span class="kemo-country-flag" aria-hidden="true">🇺🇦</span><div class="kemo-country-copy"><h3>Ukraine</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="afghanistan"><span class="kemo-country-flag" aria-hidden="true">🇦🇫</span><div class="kemo-country-copy"><h3>Afghanistan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="armenia"><span class="kemo-country-flag" aria-hidden="true">🇦🇲</span><div class="kemo-country-copy"><h3>Armenia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="azerbaijan"><span class="kemo-country-flag" aria-hidden="true">🇦🇿</span><div class="kemo-country-copy"><h3>Azerbaijan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="japan"><span class="kemo-country-flag" aria-hidden="true">🇯🇵</span><div class="kemo-country-copy"><h3>Japan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="taiwan"><span class="kemo-country-flag" aria-hidden="true">🇹🇼</span><div class="kemo-country-copy"><h3>Taiwan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="cambodia"><span class="kemo-country-flag" aria-hidden="true">🇰🇭</span><div class="kemo-country-copy"><h3>Cambodia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="cyprus"><span class="kemo-country-flag" aria-hidden="true">🇨🇾</span><div class="kemo-country-copy"><h3>Cyprus</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="kazakhstan"><span class="kemo-country-flag" aria-hidden="true">🇰🇿</span><div class="kemo-country-copy"><h3>Kazakhstan</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="malta"><span class="kemo-country-flag" aria-hidden="true">🇲🇹</span><div class="kemo-country-copy"><h3>Malta</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="slovakia"><span class="kemo-country-flag" aria-hidden="true">🇸🇰</span><div class="kemo-country-copy"><h3>Slovakia</h3><p>Channel group</p></div></article>
+        <article class="kemo-country-card" data-search="mongolia"><span class="kemo-country-flag" aria-hidden="true">🇲🇳</span><div class="kemo-country-copy"><h3>Mongolia</h3><p>Channel group</p></div></article>
       </div>
-      <div class="kemo-channel-grid" id="kemoChannelGrid">
-        <article class="kemo-channel-card" data-kind="region" data-search="united states usa america us north america"><span class="kemo-country-flag" aria-hidden="true">🇺🇸</span><div><h3>United States</h3><p>Country channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="canada canadian north america quebec french"><span class="kemo-country-flag" aria-hidden="true">🇨🇦</span><div><h3>Canada</h3><p>Country channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="united kingdom uk britain england scotland wales ireland"><span class="kemo-country-flag" aria-hidden="true">🇬🇧</span><div><h3>UK &amp; Ireland</h3><p>Country channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="latin america latino south america mexico spanish"><span class="kemo-country-flag" aria-hidden="true">🌎</span><div><h3>Latin America</h3><p>Regional channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="south asia india pakistan bangladesh"><span class="kemo-country-flag" aria-hidden="true">🌏</span><div><h3>South Asia</h3><p>Regional channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="arabic arab middle east mena north africa"><span class="kemo-country-flag" aria-hidden="true">🌍</span><div><h3>Arabic</h3><p>Language channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="portuguese brazil portugal"><span class="kemo-country-flag" aria-hidden="true">🇧🇷</span><div><h3>Portuguese &amp; Brazilian</h3><p>Language channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="italy italian"><span class="kemo-country-flag" aria-hidden="true">🇮🇹</span><div><h3>Italy</h3><p>Country channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="poland polish"><span class="kemo-country-flag" aria-hidden="true">🇵🇱</span><div><h3>Poland</h3><p>Country channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="caribbean islands"><span class="kemo-country-flag" aria-hidden="true">🏝️</span><div><h3>Caribbean</h3><p>Regional channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="region" data-search="africa african countries"><span class="kemo-country-flag" aria-hidden="true">🌍</span><div><h3>Africa</h3><p>Regional channel group</p></div></article>
-        <article class="kemo-channel-card" data-kind="category" data-search="sports football soccer basketball hockey baseball cricket rugby motorsport boxing mma golf tennis"><span class="kemo-country-flag" aria-hidden="true">⚽</span><div><h3>Sports &amp; events</h3><p>Content category</p></div></article>
-        <article class="kemo-channel-card" data-kind="category" data-search="news business markets weather"><span class="kemo-country-flag" aria-hidden="true">📰</span><div><h3>News &amp; business</h3><p>Content category</p></div></article>
-        <article class="kemo-channel-card" data-kind="category" data-search="kids family preschool cartoons animation education"><span class="kemo-country-flag" aria-hidden="true">🧸</span><div><h3>Kids &amp; family</h3><p>Content category</p></div></article>
-        <article class="kemo-channel-card" data-kind="category" data-search="documentary lifestyle nature wildlife history science cooking home travel"><span class="kemo-country-flag" aria-hidden="true">🌿</span><div><h3>Documentary &amp; lifestyle</h3><p>Content category</p></div></article>
-      </div>
-      <p class="kemo-channel-empty" id="kemoChannelEmpty" hidden>No matching groups. Try another country or category.</p>
-      <p class="kemo-channel-note">The provider publishes 34,000+ channels across these groups, but does not provide verified per-country channel counts in its public list. Counts are therefore not shown here. Channel availability and group contents can change; check the live line-up in a trial before subscribing.</p>
+      <p class="kemo-channel-empty" id="kemoChannelEmpty" hidden>No matching country or region. Try another search.</p>
+      <p class="kemo-channel-note">The provider advertises 34,000+ live channels across international groups. Per-country channel counts are not published in its current public channel guide, so this directory does not display unverified numbers. Group availability can change; confirm specific channels with the provider before subscribing.</p>
       <div class="kemo-channel-actions">
         <a class="cta" href="https://kemoiptv.digital/free-trial" rel="sponsored nofollow noopener">Check channels with a 24-hour trial</a>
         <a class="kemo-channel-text-link" href="https://kemoiptv.digital/channel-list" rel="sponsored nofollow noopener">See provider channel guide ↗</a>
@@ -252,36 +287,22 @@
 <footer class="footer"><div class="wrap">Independent informational resource · <a href="../index.html">IPTV Guide UK</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></div></footer>
 <script>
 (function(){
-  const search=document.getElementById('kemoChannelSearch');
-  const grid=document.getElementById('kemoChannelGrid');
-  const empty=document.getElementById('kemoChannelEmpty');
-  if(!search||!grid||!empty)return;
-  let filter='all';
-  const cards=Array.from(grid.querySelectorAll('.kemo-channel-card'));
-  function update(){
-    const term=search.value.trim().toLowerCase();
-    let shown=0;
-    cards.forEach(card=>{
-      const matchesTerm=!term||(card.dataset.search+' '+card.textContent).toLowerCase().includes(term);
-      const matchesFilter=filter==='all'||card.dataset.kind===filter;
-      const visible=matchesTerm&&matchesFilter;
-      card.hidden=!visible;
-      if(visible)shown++;
-    });
-    empty.hidden=shown!==0;
-  }
-  search.addEventListener('input',update);
-  document.querySelectorAll('[data-channel-filter]').forEach(button=>{
-    button.addEventListener('click',()=>{
-      filter=button.dataset.channelFilter;
-      document.querySelectorAll('[data-channel-filter]').forEach(item=>{
-        const active=item===button;
-        item.classList.toggle('active',active);
-        item.setAttribute('aria-pressed',String(active));
-      });
-      update();
-    });
+ const search=document.getElementById('kemoChannelSearch');
+ const grid=document.getElementById('kemoChannelGrid');
+ const empty=document.getElementById('kemoChannelEmpty');
+ if(!search||!grid||!empty)return;
+ const cards=Array.from(grid.querySelectorAll('.kemo-country-card'));
+ function update(){
+  const term=search.value.trim().toLowerCase();
+  let visible=0;
+  cards.forEach(card=>{
+   const show=!term||(card.dataset.search+' '+card.textContent).toLowerCase().includes(term);
+   card.hidden=!show;
+   if(show)visible++;
   });
+  empty.hidden=visible!==0;
+ }
+ search.addEventListener('input',update);
 })();
 </script>
 <script src="../analytics.js" defer></script>
