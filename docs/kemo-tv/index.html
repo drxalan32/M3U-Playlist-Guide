@@ -96,6 +96,51 @@
       <p class="kemo-glance-disclaimer">These are provider-published claims and have not been independently tested or verified by IPTV Guide UK. Features, availability and terms may change; confirm details directly with the provider.</p>
     </section>
 
+    <section class="kemo-channel-directory" id="kemo-channel-list" aria-labelledby="kemo-channel-title">
+      <div class="kemo-channel-heading">
+        <div>
+          <span class="kemo-section-kicker">EXPLORE THE LINE-UP</span>
+          <h2 id="kemo-channel-title">Kemo TV channel groups</h2>
+          <p>Browse the regions and content categories listed in Kemo's channel guide.</p>
+        </div>
+        <a class="kemo-channel-source" href="https://kemoiptv.digital/channel-list" rel="sponsored nofollow noopener">Full channel information ↗</a>
+      </div>
+      <div class="kemo-channel-controls">
+        <label class="kemo-channel-search">
+          <span class="sr-only">Search channel groups</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="kemoChannelSearch" type="search" placeholder="Search countries or categories…" autocomplete="off">
+        </label>
+        <div class="kemo-channel-filters" role="group" aria-label="Filter channel groups">
+          <button type="button" class="active" data-channel-filter="all" aria-pressed="true">All groups</button>
+          <button type="button" data-channel-filter="region" aria-pressed="false">Regions</button>
+          <button type="button" data-channel-filter="category" aria-pressed="false">Categories</button>
+        </div>
+      </div>
+      <div class="kemo-channel-grid" id="kemoChannelGrid">
+        <article class="kemo-channel-card" data-kind="region" data-search="united states usa america north america network affiliates local cable news regional sports premium movies spanish language"><span class="kemo-country-flag" aria-hidden="true">🇺🇸</span><div><h3>United States</h3><p>Network feeds, local affiliates, regional sports and entertainment</p><span class="kemo-channel-tag">North America</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="canada canadian quebec french english hockey sports news kids"><span class="kemo-country-flag" aria-hidden="true">🇨🇦</span><div><h3>Canada</h3><p>English and French channels, sports, regional news and kids</p><span class="kemo-channel-tag">North America</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="united kingdom uk britain ireland england scotland wales entertainment news sports timeshift documentary"><span class="kemo-country-flag" aria-hidden="true">🇬🇧</span><div><h3>United Kingdom &amp; Ireland</h3><p>Entertainment, news, sports, Irish channels and +1 feeds</p><span class="kemo-channel-tag">Europe</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="latin america latino south america latin american spanish"><span class="kemo-country-flag" aria-hidden="true">🌎</span><div><h3>Latin America</h3><p>International channels for Latin American audiences</p><span class="kemo-channel-tag">Americas</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="south asia india pakistan bangladesh regional channels"><span class="kemo-country-flag" aria-hidden="true">🌏</span><div><h3>South Asia</h3><p>Regional channels from South Asian communities</p><span class="kemo-channel-tag">Asia</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="arabic mena middle east arabic language channels"><span class="kemo-country-flag" aria-hidden="true">🌍</span><div><h3>Arabic</h3><p>Arabic-language channels and regional programming</p><span class="kemo-channel-tag">Middle East &amp; North Africa</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="portuguese brazil brazilian portugal channels"><span class="kemo-country-flag" aria-hidden="true">🇧🇷</span><div><h3>Portuguese &amp; Brazilian</h3><p>Portuguese-language channels and Brazilian programming</p><span class="kemo-channel-tag">International</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="italian italy italy language channels"><span class="kemo-country-flag" aria-hidden="true">🇮🇹</span><div><h3>Italian</h3><p>Italian-language channels</p><span class="kemo-channel-tag">Europe</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="polish poland polish language channels"><span class="kemo-country-flag" aria-hidden="true">🇵🇱</span><div><h3>Polish</h3><p>Polish-language channels</p><span class="kemo-channel-tag">Europe</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="caribbean island channels regional"><span class="kemo-country-flag" aria-hidden="true">🏝️</span><div><h3>Caribbean</h3><p>Channels from Caribbean communities and regions</p><span class="kemo-channel-tag">Americas</span></div></article>
+        <article class="kemo-channel-card" data-kind="region" data-search="african africa channels regional programming"><span class="kemo-country-flag" aria-hidden="true">🌍</span><div><h3>African</h3><p>Channels from African countries and communities</p><span class="kemo-channel-tag">Africa</span></div></article>
+        <article class="kemo-channel-card" data-kind="category" data-search="sports events football soccer basketball hockey baseball cricket rugby motorsport boxing mma golf tennis"><span class="kemo-country-flag" aria-hidden="true">⚽</span><div><h3>Sports &amp; events</h3><p>Sports networks and event feeds across major competitions</p><span class="kemo-channel-tag">Category</span></div></article>
+        <article class="kemo-channel-card" data-kind="category" data-search="news business markets weather international broadcasters"><span class="kemo-country-flag" aria-hidden="true">📰</span><div><h3>News &amp; business</h3><p>International news, business, markets and weather</p><span class="kemo-channel-tag">Category</span></div></article>
+        <article class="kemo-channel-card" data-kind="category" data-search="kids family preschool cartoons animation educational family movies"><span class="kemo-country-flag" aria-hidden="true">🧸</span><div><h3>Kids &amp; family</h3><p>Pre-school, cartoons, educational and family content</p><span class="kemo-channel-tag">Category</span></div></article>
+        <article class="kemo-channel-card" data-kind="category" data-search="documentary lifestyle nature wildlife history science cooking home travel adventure"><span class="kemo-country-flag" aria-hidden="true">🌿</span><div><h3>Documentary &amp; lifestyle</h3><p>Nature, history, science, food, home and travel</p><span class="kemo-channel-tag">Category</span></div></article>
+      </div>
+      <p class="kemo-channel-empty" id="kemoChannelEmpty" hidden>No matching groups. Try another country or category.</p>
+      <p class="kemo-channel-note">The provider says its channel line-up changes regularly and does not publish a fixed list of every channel name. Country-level channel counts are not displayed here because a stable, verifiable count is not provided. Check the live line-up during a trial before subscribing.</p>
+      <div class="kemo-channel-actions">
+        <a class="cta" href="https://kemoiptv.digital/free-trial" rel="sponsored nofollow noopener">Check channels with a 24-hour trial</a>
+        <a class="kemo-channel-text-link" href="https://kemoiptv.digital/channel-list" rel="sponsored nofollow noopener">See provider channel guide ↗</a>
+      </div>
+    </section>
     <section class="panel">
       <h2>Channels, sports, movies and series</h2>
       <p>Kemo's website describes a live-channel line-up covering multiple regions, with sports, news, children’s programming and international channel groups. It also advertises sports and event channels covering football, basketball, hockey, baseball and motorsport.</p>
@@ -194,6 +239,40 @@
 </main>
 
 <footer class="footer"><div class="wrap">Independent informational resource · <a href="../index.html">IPTV Guide UK</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></div></footer>
+<script>
+(function(){
+  const search=document.getElementById('kemoChannelSearch');
+  const grid=document.getElementById('kemoChannelGrid');
+  const empty=document.getElementById('kemoChannelEmpty');
+  if(!search||!grid||!empty)return;
+  let filter='all';
+  const cards=Array.from(grid.querySelectorAll('.kemo-channel-card'));
+  function update(){
+    const term=search.value.trim().toLowerCase();
+    let shown=0;
+    cards.forEach(card=>{
+      const matchesTerm=!term||(card.dataset.search+' '+card.textContent).toLowerCase().includes(term);
+      const matchesFilter=filter==='all'||card.dataset.kind===filter;
+      const visible=matchesTerm&&matchesFilter;
+      card.hidden=!visible;
+      if(visible)shown++;
+    });
+    empty.hidden=shown!==0;
+  }
+  search.addEventListener('input',update);
+  document.querySelectorAll('[data-channel-filter]').forEach(button=>{
+    button.addEventListener('click',()=>{
+      filter=button.dataset.channelFilter;
+      document.querySelectorAll('[data-channel-filter]').forEach(item=>{
+        const active=item===button;
+        item.classList.toggle('active',active);
+        item.setAttribute('aria-pressed',String(active));
+      });
+      update();
+    });
+  });
+})();
+</script>
 <script src="../analytics.js" defer></script>
 </body>
 </html>
