@@ -415,3 +415,14 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 @media(max-width:900px){.kemo-channel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.kemo-channel-directory{padding:20px 15px;border-radius:14px}.kemo-channel-heading{align-items:flex-start;flex-direction:column;gap:9px}.kemo-channel-controls{align-items:stretch;flex-direction:column}.kemo-channel-search{max-width:none}.kemo-channel-grid{grid-template-columns:1fr;gap:9px}.kemo-channel-card{min-height:0;padding:13px}.kemo-channel-actions{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(prefers-reduced-motion:reduce){.kemo-channel-card{transition:none}.kemo-channel-card:hover{transform:none}}
+
+/* Kemo profile IPTV navigation dropdown */
+.kemo-nav-dropdown{position:relative;display:inline-flex;align-items:center}
+.kemo-nav-dropdown summary{display:flex;align-items:center;gap:7px;list-style:none;cursor:pointer;color:inherit;font:inherit;font-weight:inherit}
+.kemo-nav-dropdown summary::-webkit-details-marker{display:none}
+.kemo-nav-dropdown summary:after{content:"";width:7px;height:7px;border-right:1.8px solid currentColor;border-bottom:1.8px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .16s ease}
+.kemo-nav-dropdown[open] summary:after{transform:rotate(225deg) translate(-1px,-1px)}
+.kemo-nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:0;z-index:50;min-width:180px;padding:7px;border:1px solid #e3eaf3;border-radius:11px;background:#fff;box-shadow:0 12px 28px rgba(15,35,65,.14)}
+.kemo-nav-dropdown-menu a{display:block;padding:10px 12px;border-radius:7px;color:#172941;text-decoration:none;font-size:13px;font-weight:650;white-space:nowrap}
+.kemo-nav-dropdown-menu a:hover,.kemo-nav-dropdown-menu a:focus-visible{background:#eff6ff;color:#075fd5}
+@media(max-width:720px){.kemo-nav-dropdown-menu{left:auto;right:0}}
