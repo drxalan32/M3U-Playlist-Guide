@@ -516,3 +516,11 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-icon-2{background:#fff6df;border-color:#f7e8b9}
 .kemo-icon-3{background:#edf9ed;border-color:#d8efd7}
 @media(max-width:580px){.kemo-category-icon{flex-basis:48px;width:48px;height:48px;border-radius:13px}.kemo-category-icon svg{width:31px;height:31px}}
+
+/* Real photographic thumbnails for the four channel categories */
+.kemo-category-photo{display:block;flex:0 0 62px;width:62px;height:62px;overflow:hidden;border:1px solid #e0e9f5;border-radius:15px;background-image:url("../assets/kemo-category-sprite.webp");background-repeat:no-repeat;background-size:200% 200%;background-color:#eef3f9}
+.kemo-photo-sports{background-position:0 0}
+.kemo-photo-news{background-position:100% 0}
+.kemo-photo-family{background-position:0 100%}
+.kemo-photo-documentary{background-position:100% 100%}
+@media(max-width:580px){.kemo-category-photo{flex-basis:48px;width:48px;height:48px;border-radius:12px}}
