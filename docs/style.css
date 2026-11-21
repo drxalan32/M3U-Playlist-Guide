@@ -440,3 +440,20 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 @media(min-width:1100px){.kemo-channel-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:900px){.kemo-channel-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.kemo-channel-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kemo-channel-card{min-height:72px;padding:10px;gap:8px}.kemo-country-flag{flex-basis:34px;width:34px;height:34px;font-size:21px}.kemo-channel-card h3{font-size:12px}.kemo-channel-card p{font-size:10px}.kemo-channel-summary{align-items:flex-start;flex-direction:column;gap:3px}}
+
+/* Reference-style six-column country channel directory */
+.kemo-country-directory{padding:30px;background:#f7f9fc;border:1px solid #e3eaf3;border-radius:18px}
+.kemo-country-directory .kemo-channel-heading{margin-bottom:18px}
+.kemo-country-search{max-width:430px;margin:0 0 17px;background:#fff}
+.kemo-country-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.kemo-country-card{display:flex;align-items:center;gap:11px;min-width:0;min-height:78px;padding:12px 13px;border:1px solid #dfe7f1;border-radius:18px;background:#fff;box-shadow:0 5px 13px rgba(28,48,75,.055);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+.kemo-country-card:hover{transform:translateY(-2px);border-color:#bfd3ed;box-shadow:0 9px 20px rgba(28,48,75,.09)}
+.kemo-country-card[hidden]{display:none}
+.kemo-country-flag{display:flex;align-items:center;justify-content:center;flex:0 0 40px;width:40px;height:40px;margin:0;border:1px solid #e7edf5;border-radius:9px;background:#fff;font-size:27px;line-height:1}
+.kemo-country-copy{min-width:0}
+.kemo-country-copy h3{overflow:hidden;margin:0 0 4px;color:#101c33;font-size:13px;font-weight:800;line-height:1.25;text-overflow:ellipsis;white-space:nowrap}
+.kemo-country-copy p{margin:0;color:#71819a;font-size:11px;line-height:1.25}
+@media(max-width:1150px){.kemo-country-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.kemo-country-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:580px){.kemo-country-directory{padding:18px 12px}.kemo-country-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kemo-country-card{min-height:68px;padding:9px;gap:8px;border-radius:13px}.kemo-country-flag{flex-basis:34px;width:34px;height:34px;font-size:22px}.kemo-country-copy h3{font-size:11px}.kemo-country-copy p{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.kemo-country-card{transition:none}.kemo-country-card:hover{transform:none}}
