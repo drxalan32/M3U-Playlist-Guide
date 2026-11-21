@@ -426,3 +426,17 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-nav-dropdown-menu a{display:block;padding:10px 12px;border-radius:7px;color:#172941;text-decoration:none;font-size:13px;font-weight:650;white-space:nowrap}
 .kemo-nav-dropdown-menu a:hover,.kemo-nav-dropdown-menu a:focus-visible{background:#eff6ff;color:#075fd5}
 @media(max-width:720px){.kemo-nav-dropdown-menu{left:auto;right:0}}
+
+/* Compact country-grid layout inspired by the supplied channel directory reference */
+.kemo-channel-summary{display:flex;align-items:center;gap:12px;margin:-5px 0 18px;padding:12px 15px;border:1px solid #dce9f8;border-radius:11px;background:#f2f7ff}
+.kemo-channel-summary strong{color:#075fd5;font-size:17px;font-weight:850;letter-spacing:-.02em}
+.kemo-channel-summary span{color:#62758e;font-size:12px}
+.kemo-channel-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kemo-channel-card{align-items:center;gap:11px;min-height:78px;padding:12px;border-radius:14px;background:#fff;box-shadow:0 4px 13px rgba(24,49,79,.045)}
+.kemo-country-flag{flex:0 0 40px;width:40px;height:40px;margin:0;border-radius:9px;font-size:25px}
+.kemo-channel-card h3{margin:0 0 4px;font-size:13px;font-weight:800;line-height:1.25}
+.kemo-channel-card p{margin:0;color:#718198;font-size:11px;line-height:1.3}
+.kemo-channel-card:hover{transform:translateY(-2px);border-color:#b8d2f2;box-shadow:0 8px 20px rgba(26,67,117,.08)}
+@media(min-width:1100px){.kemo-channel-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:900px){.kemo-channel-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.kemo-channel-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kemo-channel-card{min-height:72px;padding:10px;gap:8px}.kemo-country-flag{flex-basis:34px;width:34px;height:34px;font-size:21px}.kemo-channel-card h3{font-size:12px}.kemo-channel-card p{font-size:10px}.kemo-channel-summary{align-items:flex-start;flex-direction:column;gap:3px}}
