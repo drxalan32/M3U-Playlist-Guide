@@ -544,3 +544,60 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-setup-note{padding:12px 14px;border-left:3px solid #8ab7f3;background:#f2f7ff;border-radius:0 8px 8px 0;color:#526985;font-size:13px;line-height:1.6;margin-bottom:20px!important}
 .kemo-setup-help p{max-width:850px}
 @media(max-width:600px){.kemo-setup-start,.kemo-setup-help{padding:16px}.kemo-setup-item summary{padding:15px;flex-wrap:wrap}.kemo-setup-item summary small{order:3;width:100%;margin-left:0}.kemo-setup-item ol,.kemo-setup-item h3,.kemo-setup-item p{margin-left:15px;margin-right:15px}}
+
+
+/* Standalone Kemo IPTV setup guide */
+.kemo-setup-hero{background:linear-gradient(115deg,#101f3b,#0b4e9b);color:#fff;padding:54px 0}
+.kemo-setup-hero-inner{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:34px}
+.kemo-setup-kicker{display:inline-block;color:#f04455;font-size:12px;font-weight:800;letter-spacing:2px}
+.kemo-setup-hero h1{color:#fff;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0}
+.kemo-setup-hero p{max-width:680px;color:#dbeafe;font-size:18px;line-height:1.6}
+.kemo-setup-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.kemo-setup-points span{padding:8px 12px;border:1px solid #ffffff3b;border-radius:99px;color:#fff;font-size:13px}
+.kemo-setup-hero-art svg{width:100%;height:auto;filter:drop-shadow(0 16px 22px #0005)}
+.kemo-setup-main{padding-top:32px;padding-bottom:55px}
+.kemo-prep{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:20px;border:1px solid #dce6f3;border-radius:18px;background:#f4f8ff}
+.kemo-prep h2{align-self:center;margin:0;font-size:22px}
+.kemo-prep>div{padding:4px 12px;border-left:1px solid #d5dfed}
+.kemo-prep strong{color:#172b4d}
+.kemo-prep p{margin:7px 0 0;color:#64748b;font-size:13px;line-height:1.5}
+.kemo-plan-callout{margin:18px 0 36px;padding:14px 18px;border:1px solid #f4d7dc;border-radius:12px;background:#fff7f8}
+.kemo-plan-callout p{margin:0}
+.kemo-device-heading{text-align:center;margin:0 auto 22px}
+.kemo-device-heading h2{margin:7px 0;font-size:30px}
+.kemo-device-heading p{color:#64748b;margin:0}
+.kemo-device-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.kemo-device-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #dce5f0;border-radius:16px;background:#fff;box-shadow:0 6px 18px #172b4d0c;color:inherit;text-decoration:none;transition:transform .18s,border-color .18s}
+.kemo-device-card:hover{transform:translateY(-3px);border-color:#9bbbe8}
+.kemo-device-card>svg{width:100%;height:auto;display:block}
+.kemo-device-card-body{display:flex;flex-direction:column;gap:7px;padding:13px 15px 16px}
+.kemo-device-card-body strong{font-size:16px;color:#172b4d}
+.kemo-device-card-body>span{font-size:13px;line-height:1.5;color:#64748b;flex:1}
+.kemo-device-card-body small{font-weight:750;color:#0865d9}
+.kemo-guides{margin-top:54px}
+.kemo-guides>.kemo-device-heading{text-align:left}
+.kemo-guides>.kemo-device-heading h2{font-size:28px}
+.kemo-device-guide{margin:12px 0;border:1px solid #dce5f0;border-radius:15px;background:#fff;overflow:hidden;scroll-margin-top:90px}
+.kemo-device-guide summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;font-weight:800;color:#172b4d}
+.kemo-device-guide summary::-webkit-details-marker{display:none}
+.kemo-device-guide summary:after{content:"+";display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf4ff;color:#0865d9;font-size:20px}
+.kemo-device-guide[open] summary:after{content:"−"}
+.kemo-device-guide summary small{margin-left:auto;color:#64748b;font-weight:600}
+.kemo-guide-content{display:grid;grid-template-columns:220px 1fr;gap:22px;padding:4px 22px 22px;border-top:1px solid #edf1f6}
+.kemo-guide-visual{align-self:start;margin-top:18px}
+.kemo-guide-visual svg{width:100%;height:auto;border-radius:14px}
+.kemo-guide-content ol{margin:18px 0;padding-left:22px}
+.kemo-guide-content li{padding:0 0 11px 5px;line-height:1.65;color:#40536e}
+.kemo-troubleshooting{margin-top:44px}
+.kemo-setup-troubleshooting{margin-top:48px}
+.kemo-setup-troubleshooting h2{font-size:27px}
+.kemo-trouble-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.kemo-trouble-grid article{padding:18px;border:1px solid #dce5f0;border-radius:14px;background:#f8faff}
+.kemo-trouble-grid h3{margin:0 0 8px;font-size:16px}
+.kemo-trouble-grid p{margin:0;color:#64748b;line-height:1.6;font-size:14px}
+.kemo-setup-disclosure{margin-top:40px;padding:22px;border:1px solid #dce5f0;border-radius:16px;background:#f8faff}
+.kemo-setup-disclosure h2{margin-top:0;font-size:23px}
+.kemo-setup-disclosure p{line-height:1.65;color:#526985}
+@media(max-width:1000px){.kemo-device-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kemo-prep{grid-template-columns:repeat(2,minmax(0,1fr))}.kemo-setup-hero-inner{grid-template-columns:1fr .7fr}}
+@media(max-width:650px){.kemo-setup-hero{padding:38px 0}.kemo-setup-hero-inner{grid-template-columns:1fr}.kemo-setup-hero-art{max-width:340px;margin:auto}.kemo-prep{grid-template-columns:1fr}.kemo-prep>div{border-left:0;border-top:1px solid #d5dfed;padding:12px 0 0}.kemo-device-grid{grid-template-columns:1fr 1fr;gap:10px}.kemo-device-card-body{padding:10px}.kemo-device-card-body strong{font-size:14px}.kemo-device-card-body>span{font-size:12px}.kemo-device-heading h2{font-size:25px}.kemo-device-guide summary{flex-wrap:wrap;padding:15px}.kemo-device-guide summary small{order:3;width:100%;margin:0}.kemo-guide-content{grid-template-columns:1fr;padding:4px 15px 16px;gap:0}.kemo-guide-visual{max-width:260px}.kemo-trouble-grid{grid-template-columns:1fr}}
+@media(max-width:390px){.kemo-device-grid{grid-template-columns:1fr}}
