@@ -23,6 +23,7 @@ Independent, practical guides to internet protocol television (IPTV), compatible
 | Android TV players | [Best IPTV players for Android TV (2026)](https://drxalan32.github.io/M3U-Playlist-Guide/guides/best-iptv-players-android-tv-2026.html) |
 | Devices | [IPTV device guide](guides/iptv-devices-guide.md) |
 | Troubleshooting | [Buffering fixes](guides/iptv-buffering-fixes.md) |
+| Not loading | [IPTV not loading fixes](guides/iptv-not-loading.md) |
 | Provider research | [Subscription checklist](guides/iptv-subscription-checklist.md) |
 
 ## M3U and playlist learning path
