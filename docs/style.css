@@ -601,3 +601,13 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 @media(max-width:1000px){.kemo-device-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kemo-prep{grid-template-columns:repeat(2,minmax(0,1fr))}.kemo-setup-hero-inner{grid-template-columns:1fr .7fr}}
 @media(max-width:650px){.kemo-setup-hero{padding:38px 0}.kemo-setup-hero-inner{grid-template-columns:1fr}.kemo-setup-hero-art{max-width:340px;margin:auto}.kemo-prep{grid-template-columns:1fr}.kemo-prep>div{border-left:0;border-top:1px solid #d5dfed;padding:12px 0 0}.kemo-device-grid{grid-template-columns:1fr 1fr;gap:10px}.kemo-device-card-body{padding:10px}.kemo-device-card-body strong{font-size:14px}.kemo-device-card-body>span{font-size:12px}.kemo-device-heading h2{font-size:25px}.kemo-device-guide summary{flex-wrap:wrap;padding:15px}.kemo-device-guide summary small{order:3;width:100%;margin:0}.kemo-guide-content{grid-template-columns:1fr;padding:4px 15px 16px;gap:0}.kemo-guide-visual{max-width:260px}.kemo-trouble-grid{grid-template-columns:1fr}}
 @media(max-width:390px){.kemo-device-grid{grid-template-columns:1fr}}
+
+
+/* Illustrated device connection steps */
+.kemo-visual-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:20px 0 8px}
+.kemo-step-figure{margin:0;min-width:0;border:1px solid #dce6f2;border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 4px 14px #14243d0a}
+.kemo-step-figure svg{display:block;width:100%;height:auto}
+.kemo-step-figure figcaption{padding:11px 13px 14px;color:#40536e;font-size:13px;line-height:1.55}
+.kemo-guide-content{grid-template-columns:1fr}
+.kemo-guide-visual{max-width:280px}
+@media(max-width:760px){.kemo-visual-steps{grid-template-columns:1fr}.kemo-step-figure{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}.kemo-step-figure figcaption{padding:12px}.kemo-step-figure svg{height:auto}}
