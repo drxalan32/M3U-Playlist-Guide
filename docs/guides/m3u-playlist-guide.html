@@ -58,10 +58,8 @@ https://example.invalid/live/stream</code></pre>
 <li>Keep groups consistent and avoid duplicate entries where possible.</li>
 <li>Test changes with a small copy before replacing a larger playlist.</li>
 </ul>
-<h2>Common M3U playlist problems</h2>
-<h3>A playlist will not open</h3><p>Check that the file is readable text, begins with the expected header when using extended M3U, and follows the structure expected by your player. A malformed line or unsupported tag can affect how entries are displayed.</p>
-<h3>Some entries are missing</h3><p>Review whether each information line is followed by a corresponding media location. Check for blank lines, truncated URLs, duplicate entries and unsupported characters. A playlist editor can help identify formatting issues, but it cannot establish whether a remote stream is available.</p>
-<h3>Channel names or logos look wrong</h3><p>Check the spelling and placement of metadata attributes and whether the player supports them. EPG matching may depend on identifiers that need to correspond with the guide data supplied by the service.</p>
+<h2>Common playlist formatting issues</h2>
+<p>Some problems are visible in the playlist text itself: an incomplete <code>#EXTINF</code> record, a missing media-location line, malformed metadata, or an attribute that the chosen player does not support. Check the structure and metadata placement before changing app settings. For channel names or logos that do not display as expected, confirm that the relevant <code>tvg-id</code>, <code>tvg-name</code> and <code>tvg-logo</code> values are present and supported by the player.</p>
 <h2>How to read an extended M3U entry</h2>
 <p>An extended M3U entry usually pairs an information line with the media location that follows it. Read the example below from top to bottom:</p>
 <pre><code>#EXTM3U
@@ -90,14 +88,8 @@ https://example.invalid/live/news</code></pre>
 <h2>What a playlist validator can and cannot check</h2>
 <p>A text validator can identify structural issues such as a missing header, incomplete entries, malformed URL syntax, duplicate locations or suspicious blank lines. It cannot prove that a remote server is online, that a stream will play, that login details are active, or that the content is licensed. A clean validation result means the text passed the checks performed; it is not a playback or legal guarantee.</p>
 <p>Try the <a href="../tools/m3u-validator.html">M3U Playlist Validator</a> for a local structure check, or read our step-by-step guide to <a href="m3u-playlist-not-loading.html">fixing an M3U playlist that will not load</a>.</p>
-<h2>How to troubleshoot a playlist that will not load</h2>
-<ol>
-<li>Confirm whether you are opening a local <code>.m3u</code>/<code>.m3u8</code> file or a remote playlist URL.</li>
-<li>Check that the file is plain text and that its first line and entry structure match the playlist type.</li>
-<li>Try a small, unmodified sample in a player that supports the same format.</li>
-<li>Check whether the issue affects the whole playlist or only one entry.</li>
-<li>If the playlist is supplied by a provider, ask the provider to confirm the current URL, account status and supported app format.</li>
-</ol>
+<h2>When a playlist will not load</h2>
+<p>Loading failures can involve an expired URL, server response, app compatibility, device settings or network access—not just playlist formatting. Follow the dedicated <a href="m3u-playlist-not-loading.html">M3U playlist troubleshooting guide</a> for a step-by-step diagnosis of remote URLs, local files, HTTP errors, app cache, device time and network filtering.</p>
 <p>Do not paste a private playlist URL into public forums or third-party debugging sites. It may contain credentials or tokens that grant access to an account.</p>
 <h2>Handle playlist URLs carefully</h2>
 <p>An M3U URL may contain account credentials or other private access tokens. Treat it like a password: do not post it publicly, include it in screenshots, share it in support forums or send it to unknown online converters. Prefer local tools that process playlist contents in your browser, and check their privacy explanation before using them.</p>
