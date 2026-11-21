@@ -482,3 +482,28 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-directory-tabs button.active{border-color:#0868df;background:#0868df;color:#fff;box-shadow:0 3px 9px rgba(8,104,223,.17)}
 .kemo-directory-tabs button:focus-visible{outline:3px solid rgba(8,104,223,.22);outline-offset:3px}
 @media(max-width:580px){.kemo-directory-tabs{justify-content:flex-start;gap:6px}.kemo-directory-tabs button{min-height:38px;padding:8px 13px;font-size:12px}}
+
+/* Separate Explore Channel Groups panel with working All / Regions / Categories tabs */
+.kemo-region-explorer{margin:28px 0;padding:34px 38px;background:#f6f8fc;border:1px solid #e1e9f4;border-radius:18px}
+.kemo-region-explorer h2{margin:9px 0 8px;color:#172b47;font-size:28px;letter-spacing:-.035em}
+.kemo-explorer-intro{margin:0 0 22px;color:#71829a;font-size:15px;line-height:1.6}
+.kemo-explorer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 18px}
+.kemo-explorer-search{display:flex;align-items:center;gap:12px;flex:1;max-width:620px;min-height:62px;padding:0 18px;border:1px solid #d9e4f2;border-radius:14px;background:#fff;color:#71829a}
+.kemo-explorer-search input{width:100%;border:0;outline:0;background:transparent;color:#172b47;font:inherit;font-size:15px}
+.kemo-explorer-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.kemo-explorer-tabs button{min-height:46px;padding:10px 17px;border:1px solid #dce6f3;border-radius:999px;background:#fff;color:#586d87;font:inherit;font-size:13px;font-weight:750;cursor:pointer}
+.kemo-explorer-tabs button:hover{border-color:#9fc2ef;color:#075fd5}
+.kemo-explorer-tabs button.active{border-color:#0868df;background:#0868df;color:#fff;box-shadow:0 3px 9px rgba(8,104,223,.17)}
+.kemo-explorer-tabs button:focus-visible{outline:3px solid rgba(8,104,223,.22);outline-offset:3px}
+.kemo-explorer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.kemo-explore-card{display:flex;align-items:flex-start;gap:16px;min-width:0;min-height:164px;padding:22px;border:1px solid #dce6f4;border-radius:20px;background:linear-gradient(145deg,#fff,#fbfdff);transition:border-color .16s ease,box-shadow .16s ease}
+.kemo-explore-card:hover{border-color:#b9d2f4;box-shadow:0 8px 22px rgba(28,57,91,.055)}
+.kemo-explore-card[hidden]{display:none}
+.kemo-explore-flag{display:flex;align-items:center;justify-content:center;flex:0 0 62px;width:62px;height:62px;border:1px solid #e1eaf6;border-radius:17px;background:#f3f7fd;font-size:31px}
+.kemo-explore-copy{min-width:0}
+.kemo-explore-copy h3{margin:2px 0 8px;color:#1a2c46;font-size:19px;font-weight:800;line-height:1.25}
+.kemo-explore-copy p{margin:0 0 16px;color:#71829a;font-size:14px;line-height:1.55}
+.kemo-explore-tag{display:inline-flex;padding:8px 12px;border-radius:9px;background:#edf4ff;color:#37669f;font-size:12px;font-weight:800;letter-spacing:.02em}
+.kemo-explorer-empty{margin:18px 0 0;color:#71829a}
+@media(max-width:1000px){.kemo-explorer-toolbar{align-items:flex-start;flex-direction:column}.kemo-explorer-search{max-width:none;width:100%}.kemo-explorer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.kemo-region-explorer{padding:22px 14px}.kemo-region-explorer h2{font-size:23px}.kemo-explorer-grid{grid-template-columns:1fr;gap:10px}.kemo-explore-card{min-height:0;padding:16px;border-radius:15px;gap:12px}.kemo-explore-flag{flex-basis:48px;width:48px;height:48px;border-radius:13px;font-size:25px}.kemo-explore-copy h3{font-size:16px}.kemo-explore-copy p{font-size:13px;margin-bottom:11px}.kemo-explorer-tabs{width:100%}.kemo-explorer-tabs button{flex:1;padding:9px 10px}}
