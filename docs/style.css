@@ -457,3 +457,20 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 @media(max-width:800px){.kemo-country-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:580px){.kemo-country-directory{padding:18px 12px}.kemo-country-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kemo-country-card{min-height:68px;padding:9px;gap:8px;border-radius:13px}.kemo-country-flag{flex-basis:34px;width:34px;height:34px;font-size:22px}.kemo-country-copy h3{font-size:11px}.kemo-country-copy p{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.kemo-country-card{transition:none}.kemo-country-card:hover{transform:none}}
+
+/* Regional channel overview cards, matching the supplied second reference */
+.kemo-region-directory{margin-top:28px;padding-top:25px;border-top:1px solid #e5ebf3}
+.kemo-region-heading{margin-bottom:17px}
+.kemo-region-heading h3{margin:0 0 6px;color:#172941;font-size:23px;letter-spacing:-.035em}
+.kemo-region-heading p{margin:0;color:#687990;font-size:13px}
+.kemo-region-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kemo-region-card{display:flex;align-items:flex-start;gap:13px;min-width:0;min-height:145px;padding:17px;border:1px solid #dfe8f5;border-radius:16px;background:linear-gradient(145deg,#fff,#fbfdff);transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.kemo-region-card:hover{transform:translateY(-2px);border-color:#b8d2f2;box-shadow:0 8px 20px rgba(26,67,117,.07)}
+.kemo-region-flag{display:flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;border:1px solid #e4ebf5;border-radius:13px;background:#f4f8fe;font-size:28px}
+.kemo-region-card>div{min-width:0}
+.kemo-region-card h4{margin:2px 0 7px;color:#172941;font-size:15px;line-height:1.3}
+.kemo-region-card p{margin:0 0 10px;color:#687990;font-size:12px;line-height:1.55}
+.kemo-region-card>div>span{display:inline-block;padding:6px 9px;border-radius:7px;background:#edf4ff;color:#356294;font-size:10px;font-weight:800;letter-spacing:.02em}
+@media(max-width:900px){.kemo-region-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.kemo-region-grid{grid-template-columns:1fr;gap:9px}.kemo-region-card{min-height:0;padding:14px}.kemo-region-flag{flex-basis:42px;width:42px;height:42px;font-size:25px}.kemo-region-card h4{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.kemo-region-card{transition:none}.kemo-region-card:hover{transform:none}}
