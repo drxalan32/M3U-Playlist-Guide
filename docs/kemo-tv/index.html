@@ -16,7 +16,7 @@
   <meta name="twitter:title" content="Kemo TV Profile: Features, Plans & Device Setup">
   <meta name="twitter:description" content="Review Kemo TV's advertised service features, plans, trial, supported devices and setup methods.">
   <meta name="twitter:image" content="https://drxalan32.github.io/M3U-Playlist-Guide/thumbnail%20iptv%20guide%20uk.jpg">
-  <link rel="stylesheet" href="../style.css?v=20261121-single-grid-final-8">
+  <link rel="stylesheet" href="../style.css?v=20261121-single-grid-final-9">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","name":"Kemo TV Profile: Features, Channels, Plans & Device Setup","description":"An independent profile summarising information published on the Kemo TV provider website, including advertised features, plans, trial and device setup.","url":"https://drxalan32.github.io/M3U-Playlist-Guide/kemo-tv/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"IPTV Guide UK","url":"https://drxalan32.github.io/M3U-Playlist-Guide/"}}</script>
 </head>
 <body>
@@ -199,11 +199,12 @@
 <article class="kemo-country-card" data-kind="region" data-search="polish polish-language channels europe"><span class="kemo-country-flag" aria-hidden="true">🇵🇱</span><div class="kemo-country-copy"><h3>Polish</h3><p>Polish-language channels</p><p>Europe</p></div></article>
 <article class="kemo-country-card" data-kind="region" data-search="caribbean channels from caribbean communities and regions americas"><span class="kemo-country-flag" aria-hidden="true">🏝️</span><div class="kemo-country-copy"><h3>Caribbean</h3><p>Channels from Caribbean communities and regions</p><p>Americas</p></div></article>
 <article class="kemo-country-card" data-kind="region" data-search="african channels from african countries and communities africa"><span class="kemo-country-flag" aria-hidden="true">🌍</span><div class="kemo-country-copy"><h3>African</h3><p>Channels from African countries and communities</p><p>Africa</p></div></article>
-<article class="kemo-country-card" data-kind="category" data-search="sports football, basketball, hockey, cricket, motorsports and more"><span class="kemo-country-flag" aria-hidden="true">⚽</span><div class="kemo-country-copy"><h3>Sports</h3><p>Football, basketball, hockey, cricket, motorsports and more</p><p>Sports</p></div></article>
-<article class="kemo-country-card" data-kind="category" data-search="news and business international news, business and current-affairs channels"><span class="kemo-country-flag" aria-hidden="true">📰</span><div class="kemo-country-copy"><h3>News &amp; Business</h3><p>International news, business and current-affairs channels</p><p>News</p></div></article>
-<article class="kemo-country-card" data-kind="category" data-search="kids and family cartoons, children’s programming and family entertainment"><span class="kemo-country-flag" aria-hidden="true">🧸</span><div class="kemo-country-copy"><h3>Kids &amp; Family</h3><p>Cartoons, children’s programming and family entertainment</p><p>Family</p></div></article>
-<article class="kemo-country-card" data-kind="category" data-search="documentary and lifestyle nature, history, science, travel and lifestyle programming"><span class="kemo-country-flag" aria-hidden="true">🌿</span><div class="kemo-country-copy"><h3>Documentary &amp; Lifestyle</h3><p>Nature, history, science, travel and lifestyle programming</p><p>Lifestyle</p></div></article>
+
+
+
+
       </div>
+      <p class="kemo-channel-empty" id="kemoChannelEmpty" hidden>No matching groups. Try another search.</p>
 
     </section>
     
@@ -312,7 +313,7 @@
  const grid=document.getElementById('kemoChannelGrid');
  const empty=document.getElementById('kemoChannelEmpty');
  const tabs=Array.from(document.querySelectorAll('[data-directory-filter]'));
- if(!search||!grid||!empty)return;
+ if(!search||!grid)return;
  const cards=Array.from(grid.querySelectorAll('.kemo-country-card'));
  let filter='all';
  function update(){
@@ -325,7 +326,7 @@
    card.hidden=!show;
    if(show)visible++;
   });
-  empty.hidden=visible!==0;
+  if(empty)empty.hidden=visible!==0;
  }
  search.addEventListener('input',update);
  tabs.forEach(button=>button.addEventListener('click',()=>{
