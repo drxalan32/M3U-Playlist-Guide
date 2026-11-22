@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="t d">
+<title id="t">Samsung Smart TV</title><desc id="d">Open Samsung Apps from the Home screen and check the exact app publisher.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f7ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14233d"/><stop offset="1" stop-color="#263d62"/></linearGradient></defs>
+<rect width="1200" height="650" rx="30" fill="url(#bg)"/>
+<circle cx="1040" cy="100" r="170" fill="#dcefeb" opacity=".6"/><circle cx="110" cy="590" r="180" fill="#e4efff" opacity=".7"/>
+<text x="70" y="90" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#087c78">KEMO IPTV • SETUP GUIDE</text>
+<text x="70" y="155" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="#14233d">Samsung Smart TV</text>
+<text x="70" y="198" font-family="Arial,sans-serif" font-size="22" fill="#5d708c">Open Samsung Apps from the Home screen and check the exact app publisher.</text>
+<rect x="70" y="250" width="650" height="290" rx="24" fill="#fff" stroke="#dce6f2" stroke-width="3"/>
+<circle cx="120" cy="320" r="21" fill="#dcefeb"/><text x="120" y="328" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#087c78">1</text><text x="165" y="328" font-family="Arial" font-size="24" font-weight="700" fill="#17243b">1  Press Home</text><circle cx="120" cy="398" r="21" fill="#dcefeb"/><text x="120" y="406" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#087c78">2</text><text x="165" y="406" font-family="Arial" font-size="24" font-weight="700" fill="#17243b">2  Open Apps and search</text><circle cx="120" cy="476" r="21" fill="#dcefeb"/><text x="120" y="484" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#087c78">3</text><text x="165" y="484" font-family="Arial" font-size="24" font-weight="700" fill="#17243b">3  Verify developer + install</text>
+<rect x="780" y="250" width="350" height="290" rx="28" fill="url(#screen)"/>
+<rect x="805" y="278" width="300" height="48" rx="10" fill="#ffffff" opacity=".12"/>
+<text x="955" y="309" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#fff">SETUP CHECK</text>
+<rect x="805" y="350" width="300" height="42" rx="9" fill="#ffffff" opacity=".12"/><rect x="805" y="407" width="300" height="42" rx="9" fill="#ffffff" opacity=".12"/>
+<circle cx="830" cy="371" r="9" fill="#62d3bd"/><circle cx="830" cy="428" r="9" fill="#62d3bd"/>
+<text x="855" y="378" font-family="Arial" font-size="16" fill="#fff">Check each step</text><text x="855" y="435" font-family="Arial" font-size="16" fill="#fff">Use your own device</text>
+<text x="70" y="590" font-family="Arial" font-size="20" fill="#5d708c">If the app is unavailable, check model and region.</text>
+<text x="1130" y="610" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#087c78">ILLUSTRATIVE GUIDE</text>
+</svg>
