@@ -653,3 +653,8 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .smarters-download>a{font-weight:750}
 @media(max-width:850px){.smarters-hero{grid-template-columns:1fr}.smarters-before-grid{grid-template-columns:1fr}.smarters-step{grid-template-columns:1fr}.smarters-step-copy{max-width:none}.smarters-step figure{max-width:650px}}
 @media(max-width:600px){.smarters-hero{padding:21px}.smarters-hero-actions{align-items:flex-start;flex-direction:column}.smarters-callout{align-items:flex-start;flex-direction:column}.smarters-errors-grid{grid-template-columns:1fr}.smarters-step{padding:18px 0}.smarters-step h3{font-size:20px}}
+
+/* Kemo profile: make the primary trial action easy to notice */
+.kemo-trial-cta{display:flex!important;width:100%;box-sizing:border-box;justify-content:center;align-items:center;gap:10px;margin:22px 0 14px!important;padding:17px 18px!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#0b8f87,#08756f)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;line-height:1.35;box-shadow:0 9px 22px rgba(8,117,111,.24)!important;text-align:center;}
+.kemo-trial-cta:hover{background:linear-gradient(135deg,#087b75,#06635f)!important;transform:translateY(-1px);text-decoration:none!important;}
+.kemo-trial-cta .sponsored-label{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.3);}
