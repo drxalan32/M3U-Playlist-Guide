@@ -668,3 +668,37 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .side .kemo-trial-cta{background:linear-gradient(135deg,#1675e8,#0755c7)!important;box-shadow:0 9px 22px rgba(7,85,199,.24)!important;}
 .side .kemo-trial-cta:hover{background:linear-gradient(135deg,#0d66d5,#0647aa)!important;}
 .side:has(.kemo-trial-cta) .small{color:#617b9b!important;}
+
+
+/* Kemo profile hero: show the complete promotional artwork without cropping */
+.hero.reference-hero .hero-art {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 24px !important;
+  overflow: visible !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.hero.reference-hero .hero-art img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 20px !important;
+}
+@media (max-width: 720px) {
+  .hero.reference-hero .hero-art {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 12px 18px 24px !important;
+  }
+  .hero.reference-hero .hero-art img {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
