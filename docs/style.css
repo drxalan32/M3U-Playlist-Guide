@@ -658,3 +658,13 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 .kemo-trial-cta{display:flex!important;width:100%;box-sizing:border-box;justify-content:center;align-items:center;gap:10px;margin:22px 0 14px!important;padding:17px 18px!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#0b8f87,#08756f)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;line-height:1.35;box-shadow:0 9px 22px rgba(8,117,111,.24)!important;text-align:center;}
 .kemo-trial-cta:hover{background:linear-gradient(135deg,#087b75,#06635f)!important;transform:translateY(-1px);text-decoration:none!important;}
 .kemo-trial-cta .sponsored-label{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.3);}
+
+/* Kemo profile provider card: blue visual treatment */
+.side:has(.kemo-trial-cta){background:linear-gradient(160deg,#eff6ff 0%,#e5f0ff 100%)!important;border:1px solid #c7dcff!important;box-shadow:0 12px 32px rgba(25,91,170,.10)!important;}
+.side:has(.kemo-trial-cta) h2{color:#102f59!important;}
+.side:has(.kemo-trial-cta) p,.side:has(.kemo-trial-cta) li{color:#183b67!important;}
+.side:has(.kemo-trial-cta) p strong{color:#31577f!important;}
+.side:has(.kemo-trial-cta) a:not(.kemo-trial-cta){color:#075fd5!important;font-weight:650;}
+.side .kemo-trial-cta{background:linear-gradient(135deg,#1675e8,#0755c7)!important;box-shadow:0 9px 22px rgba(7,85,199,.24)!important;}
+.side .kemo-trial-cta:hover{background:linear-gradient(135deg,#0d66d5,#0647aa)!important;}
+.side:has(.kemo-trial-cta) .small{color:#617b9b!important;}
