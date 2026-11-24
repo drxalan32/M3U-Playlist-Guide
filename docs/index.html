@@ -173,24 +173,33 @@
 </div></section>
 <section class="viewer-stories" aria-labelledby="viewer-stories-title">
 <style>
-.viewer-stories{margin:38px 0;padding:clamp(24px,4vw,48px);border:1px solid #dce8f6;border-radius:22px;background:linear-gradient(135deg,#f4f9ff,#fff);color:#102747}
-.viewer-stories .stories-kicker{color:#0879b8;font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}
-.viewer-stories .stories-heading{max-width:760px;margin:10px 0 25px}
-.viewer-stories h2{margin:0 0 10px;color:#102747;font-size:clamp(26px,4vw,40px);line-height:1.12;letter-spacing:-1px}
-.viewer-stories .stories-intro{margin:0;color:#52657b;font-size:16px;line-height:1.65}
+.viewer-stories{margin:38px 0;padding:clamp(24px,4vw,54px);border:1px solid #2d69b5;border-radius:22px;background:linear-gradient(135deg,#073b8c 0%,#0756b5 55%,#0b3475 100%);color:#f7f9ff}
+.viewer-stories *{box-sizing:border-box}
+.viewer-stories .stories-kicker{color:#19d5c5;font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}
+.viewer-stories .stories-heading{display:grid;grid-template-columns:1.4fr .6fr;gap:30px;align-items:end;margin:10px 0 30px}
+.viewer-stories h2{max-width:800px;margin:0;color:#fff;font-size:clamp(32px,5vw,58px);line-height:1.05;letter-spacing:-1.8px}
+.viewer-stories .stories-intro{margin:0 0 5px;color:#aeb9ca;font-size:14px;line-height:1.7}
+.viewer-stories .stories-demo-note{display:inline-flex;margin:0 0 20px;padding:7px 11px;border:1px solid #78b7f4;border-radius:7px;background:#0b438b;color:#d9f1ff;font-size:11px;font-weight:750;letter-spacing:.3px}
 .viewer-stories .stories-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.viewer-stories .story-card{padding:22px;border:1px solid #dce8f6;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(15,42,74,.06)}
-.viewer-stories .story-number{display:grid;place-items:center;width:38px;height:38px;margin-bottom:15px;border-radius:12px;background:#e8f7ff;color:#0879b8;font-weight:850}
-.viewer-stories .story-card h3{margin:0 0 8px;color:#102747;font-size:18px}
-.viewer-stories .story-card p{margin:0;color:#52657b;font-size:14px;line-height:1.65}
-@media(max-width:760px){.viewer-stories .stories-grid{grid-template-columns:1fr}}
+.viewer-stories .story-card{display:flex;flex-direction:column;min-height:260px;padding:25px;border:1px solid #3975bd;border-radius:17px;background:#10478f}
+.viewer-stories .story-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}
+.viewer-stories .story-stars{color:#ffbd25;font-size:17px;letter-spacing:3px}
+.viewer-stories .story-quote-mark{color:#1bb8ac;font-size:30px;font-weight:900;line-height:1}
+.viewer-stories blockquote{flex:1;margin:0 0 25px;color:#c5ccda;font-size:15px;line-height:1.75}
+.viewer-stories .story-person{display:flex;align-items:center;gap:11px;padding-top:17px;border-top:1px solid #3975bd}
+.viewer-stories .story-avatar{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border:1px solid #155b60;border-radius:50%;background:#102c36;color:#20d5c3;font-size:12px;font-weight:850}
+.viewer-stories .story-person strong{display:block;color:#f4f6fb;font-size:13px}
+.viewer-stories .story-person small{display:block;margin-top:4px;color:#96a2b5;font-size:11px}
+.viewer-stories .story-label{margin-left:auto;color:#91a0b4;font-size:9px;text-transform:uppercase;letter-spacing:.8px}
+@media(max-width:800px){.viewer-stories .stories-heading{grid-template-columns:1fr;gap:12px}.viewer-stories .stories-grid{grid-template-columns:1fr}.viewer-stories .story-card{min-height:0}}
 </style>
-<div class="stories-kicker">PRACTICAL IPTV HELP</div>
-<div class="stories-heading"><h2 id="viewer-stories-title">Understand it. Set it up. Fix it.</h2><p class="stories-intro">Use these guides to understand playlist formats, check device compatibility and work through common setup or playback problems. Instructions vary by app, device and service, so always confirm current support before entering account details.</p></div>
+<div class="stories-kicker">VIEWER EXPERIENCE</div>
+<div class="stories-heading"><h2 id="viewer-stories-title">A smoother setup starts with clear guidance.</h2><p class="stories-intro">Simple instructions can make it easier to understand device compatibility, enter playlist details and troubleshoot common playback issues.</p></div>
+<div class="stories-demo-note">SAMPLE REVIEW COPY · NOT VERIFIED CUSTOMER TESTIMONIALS</div>
 <div class="stories-grid">
-<article class="story-card"><div class="story-number">01</div><h3>Learn the basics</h3><p>Understand M3U and M3U8 files, playlist tags, EPG data and the difference between a player app and a content provider.</p></article>
-<article class="story-card"><div class="story-number">02</div><h3>Set up your device</h3><p>Follow device-specific guidance for Fire TV, Android TV, Apple TV and Smart TVs. Check app availability and publisher details first.</p></article>
-<article class="story-card"><div class="story-number">03</div><h3>Troubleshoot carefully</h3><p>Diagnose buffering, login errors, missing channels and EPG issues by changing one setting at a time and protecting private credentials.</p></article>
+<article class="story-card"><div class="story-top"><span class="story-stars" aria-label="Example five-star rating">★★★★★</span><span class="story-quote-mark" aria-hidden="true">”</span></div><blockquote>“Kemo made getting started simple. The setup instructions were clear, and I could follow each step without confusion.”</blockquote><div class="story-person"><span class="story-avatar">G</span><span><strong>Gina</strong><small>Sample review copy · awaiting approval</small></span><span class="story-label">Sample</span></div></article>
+<article class="story-card"><div class="story-top"><span class="story-stars" aria-label="Example five-star rating">★★★★★</span><span class="story-quote-mark" aria-hidden="true">”</span></div><blockquote>“I have had a good experience with Kemo so far. The service is easy to use, and getting help when I need it makes a difference.”</blockquote><div class="story-person"><span class="story-avatar">A</span><span><strong>Addela</strong><small>Sample review copy · awaiting approval</small></span><span class="story-label">Sample</span></div></article>
+<article class="story-card"><div class="story-top"><span class="story-stars" aria-label="Example five-star rating">★★★★★</span><span class="story-quote-mark" aria-hidden="true">”</span></div><blockquote>“Kemo has been a helpful option for my viewing. The setup was straightforward, and the overall experience has been smooth.”</blockquote><div class="story-person"><span class="story-avatar">EX</span><span><strong>Example Viewer 03</strong><small>Illustrative troubleshooting scenario</small></span><span class="story-label">Sample</span></div></article>
 </div>
 </section>
 <section class="panel" id="home-faq"><h2>Frequently asked questions</h2><h3>What is IPTV and how does it work?</h3><p>IPTV stands for Internet Protocol Television. It delivers television or video over internet networks using compatible apps, devices and content sources.</p><h3>Is IPTV legal in the UK?</h3><p>IPTV technology is legal to use. The legality of a particular service depends on whether the provider has the necessary rights to distribute the channels and programmes it offers.</p><h3>What is an M3U playlist?</h3><p>An M3U playlist is a text file or response that can list media locations and related metadata for a compatible player.</p><h3>Do IPTV apps provide channels?</h3><p>Most IPTV player apps do not include channels. They provide an interface for a playlist or service supplied separately by the user.</p><h3>Can I use any IPTV app on my device?</h3><p>No. App availability and features vary by device, operating-system version, region and developer support.</p><h3>What internet speed do I need for IPTV?</h3><p>The speed you need depends on video quality, the number of simultaneous streams and network conditions. A stable connection matters as well as download speed.</p><h3>Why does IPTV keep buffering?</h3><p>Common causes include weak Wi-Fi, network congestion, device performance, app problems or issues with the content source.</p><h3>What is the difference between M3U and Xtream Codes?</h3><p>M3U usually connects through a playlist URL or file. Xtream-style login typically uses a server address, username and password. The formats are not automatically interchangeable.</p></section>
