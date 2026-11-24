@@ -702,3 +702,132 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
     min-height: 0 !important;
   }
 }
+
+
+/* Kemo guide cards — premium visual refresh */
+.reference-cards{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:22px;
+  margin:0 0 44px;
+  align-items:stretch;
+}
+.reference-card{
+  position:relative;
+  isolation:isolate;
+  border:1px solid #dce9f7;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(15,42,74,.09);
+  overflow:hidden;
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+.reference-card:hover{
+  transform:translateY(-7px);
+  border-color:#8bdcf7;
+  box-shadow:0 18px 38px rgba(15,42,74,.16);
+  text-decoration:none;
+}
+.reference-card:focus-visible{
+  outline:3px solid #4cc9f0;
+  outline-offset:4px;
+}
+.card-art{
+  height:158px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate;
+}
+.card-art:before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;
+  pointer-events:none;
+  z-index:2;
+}
+.card-art:after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  width:190px;
+  height:110px;
+  left:50%;
+  bottom:-64px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(76,201,240,.58),transparent 70%);
+  filter:blur(12px);
+}
+.art-m3u{background:radial-gradient(circle at 72% 20%,#1b80c2 0,#123f70 42%,#0b2443 100%)}
+.file-sheet{
+  width:88px;height:108px;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:13px;
+  background:linear-gradient(145deg,#fff 0%,#e8f5ff 65%,#b9e8fb 100%);
+  box-shadow:0 15px 25px rgba(0,10,30,.35),inset 0 1px 0 #fff;
+  transform:rotate(-7deg) translateY(2px);
+  transition:transform .3s ease;
+}
+.file-sheet b{background:#0f2a4a;color:#fff;letter-spacing:.04em}
+.file-sheet span{color:#f2542d;text-shadow:0 3px 10px rgba(242,84,45,.2)}
+.art-device{background:radial-gradient(circle at 70% 25%,#4cc9f0 0,#14618d 34%,#0f2a4a 82%)}
+.device-remote{
+  height:116px;width:34px;left:29%;top:15px;
+  border:1px solid #8da9bd;
+  background:linear-gradient(90deg,#080f1b,#526578 46%,#101c2a);
+  box-shadow:0 14px 24px rgba(0,8,25,.42);
+}
+.device-stick{
+  bottom:15px;right:13%;width:53%;height:44px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:9px;
+  background:linear-gradient(145deg,#334b60,#0b1420 75%);
+  color:#4cc9f0;
+  box-shadow:0 12px 22px rgba(0,8,25,.42);
+}
+.art-epg{background:radial-gradient(circle at 25% 18%,#287fb5 0,#123e69 48%,#0f2a4a 100%)}
+.epg-screen{
+  width:88%;
+  padding:13px 12px 10px;
+  border:1px solid rgba(76,201,240,.7);
+  border-radius:12px;
+  background:linear-gradient(145deg,#102f50,#071a30);
+  box-shadow:0 15px 26px rgba(0,8,25,.42),0 0 22px rgba(76,201,240,.16);
+  transform:perspective(600px) rotateY(-7deg) rotateX(3deg);
+}
+.epg-screen b{color:#4cc9f0}
+.epg-screen span{background:rgba(76,201,240,.13);border:1px solid rgba(76,201,240,.12)}
+.art-speed{background:radial-gradient(circle at 50% 15%,#1b6697 0,#123c67 48%,#0f2a4a 100%)}
+.gauge-arc{
+  border-color:#4cc9f0;
+  border-bottom-color:rgba(76,201,240,.15);
+  box-shadow:0 0 22px rgba(76,201,240,.45);
+}
+.speed-gauge b{color:#fff;text-shadow:0 0 16px rgba(76,201,240,.75)}
+.reference-card>div:not(.card-art){padding:17px 19px 19px}
+.reference-card h2{color:#0f2a4a;font-size:19px;line-height:1.28;margin:0 0 7px}
+.reference-card p{color:#52657b;font-size:14px;line-height:1.55;margin:0 0 13px;min-height:44px}
+.reference-card strong{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:#0f6fa8;
+  font-size:14px;
+  font-weight:750;
+  transition:color .2s ease,gap .2s ease;
+}
+.reference-card:hover strong{color:#f2542d;gap:10px}
+@media(max-width:1050px){.reference-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+@media(max-width:720px){
+  .reference-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+  .card-art{height:124px}
+  .reference-card>div:not(.card-art){padding:13px 13px 15px}
+  .reference-card h2{font-size:16px}
+  .reference-card p{font-size:13px;min-height:0}
+}
+@media(max-width:420px){.reference-cards{grid-template-columns:1fr}.card-art{height:150px}}
+@media(prefers-reduced-motion:reduce){.reference-card,.file-sheet,.reference-card strong{transition:none}.reference-card:hover{transform:none}}
