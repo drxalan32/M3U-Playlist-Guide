@@ -1136,3 +1136,68 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
     font-size:14px;
   }
 }
+
+
+/* Kemo pricing: structured comparison cards instead of a plain HTML table */
+.kemo-pricing-section{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(22px,3.2vw,38px)!important;
+  border:1px solid #dce8f5!important;
+  border-radius:22px!important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(76,201,240,.13),transparent 30%),
+    linear-gradient(145deg,#f8fbff 0%,#fff 58%,#f2f8ff 100%)!important;
+  box-shadow:0 14px 38px rgba(16,47,89,.065)!important;
+}
+.kemo-pricing-heading{max-width:850px;margin-bottom:24px}
+.kemo-pricing-heading h2{margin:7px 0 10px!important;font-size:clamp(25px,3vw,34px)!important;line-height:1.14!important;color:#102747!important}
+.kemo-pricing-heading>p{margin:0!important;color:#5b6f87!important;font-size:16px;line-height:1.65}
+.kemo-pricing-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.kemo-pricing-meta span{display:inline-flex;align-items:center;min-height:31px;padding:6px 11px;border:1px solid #d7e8f6;border-radius:999px;background:#fff;color:#37617f;font-size:12px;font-weight:700}
+.kemo-plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.kemo-plan-card{
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #d9e7f4;
+  border-radius:17px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(15,42,74,.055);
+}
+.kemo-plan-card-head{position:relative;padding:19px 20px 16px;background:linear-gradient(120deg,#edf7ff,#f8fcff);border-bottom:1px solid #e1edf7}
+.kemo-plan-card-head>span{color:#087dbb;font-size:10px;font-weight:850;letter-spacing:1.6px}
+.kemo-plan-card-head h3{margin:7px 0 3px!important;color:#102747!important;font-size:23px!important;line-height:1.2}
+.kemo-plan-card-head p{margin:0!important;color:#718198!important;font-size:13px}
+.kemo-plan-prices{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:15px}
+.kemo-plan-prices>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-width:0;min-height:76px;padding:8px 3px;border:1px solid #e3edf6;border-radius:11px;background:#f8fbff;text-align:center}
+.kemo-plan-prices span{color:#667b92;font-size:10px;line-height:1.2;white-space:nowrap}
+.kemo-plan-prices strong{color:#075db8;font-size:clamp(16px,1.7vw,21px);font-weight:850;letter-spacing:-.5px}
+.kemo-plan-card-featured{border-color:#9fcdf0;box-shadow:0 12px 28px rgba(8,103,180,.10)}
+.kemo-plan-card-featured .kemo-plan-card-head{background:linear-gradient(120deg,#e4f4ff,#f1f9ff)}
+.kemo-plan-card-featured .kemo-plan-prices>div{background:#f0f8ff;border-color:#d4e9f8}
+.kemo-pricing-footnote{display:grid;grid-template-columns:150px minmax(0,1fr);gap:15px;margin-top:21px;padding:18px 20px;border:1px solid #dceaf5;border-radius:14px;background:rgba(239,247,255,.8)}
+.kemo-pricing-footnote>strong{color:#173d60;font-size:14px}
+.kemo-pricing-footnote p{margin:0!important;color:#5e7188!important;font-size:13px;line-height:1.7}
+.kemo-pricing-footnote a{color:#075fd5;font-weight:700}
+.kemo-pricing-action{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:20px;padding:18px 20px;border-radius:15px;background:linear-gradient(115deg,#082d59,#075a9d);color:#fff}
+.kemo-pricing-action>div{min-width:0}
+.kemo-sponsored-note{display:inline-block;color:#9edfff;font-size:10px;font-weight:850;letter-spacing:1.1px;text-transform:uppercase}
+.kemo-pricing-action p{margin:5px 0 0!important;color:#e0efff!important;font-size:13px;line-height:1.5}
+.kemo-pricing-cta{display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 19px;border:1px solid rgba(255,255,255,.25);border-radius:11px;background:#fff;color:#0757a8!important;font-size:14px;font-weight:850;text-decoration:none;box-shadow:0 7px 18px rgba(0,0,0,.12);transition:transform .18s ease,box-shadow .18s ease}
+.kemo-pricing-cta:hover{transform:translateY(-2px);box-shadow:0 11px 24px rgba(0,0,0,.18);text-decoration:none}
+@media(max-width:760px){
+  .kemo-pricing-section{padding:21px 16px!important;border-radius:17px!important}
+  .kemo-plan-grid{grid-template-columns:1fr;gap:13px}
+  .kemo-plan-card-head{padding:16px}
+  .kemo-plan-prices{gap:5px;padding:11px}
+  .kemo-plan-prices>div{min-height:68px;padding:7px 2px}
+  .kemo-plan-prices span{font-size:9px}
+  .kemo-plan-prices strong{font-size:18px}
+  .kemo-pricing-footnote{grid-template-columns:1fr;gap:6px;padding:15px}
+  .kemo-pricing-action{align-items:stretch;flex-direction:column;padding:17px}
+  .kemo-pricing-cta{width:100%;box-sizing:border-box}
+}
+@media(max-width:360px){
+  .kemo-plan-prices{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(prefers-reduced-motion:reduce){.kemo-pricing-cta{transition:none}.kemo-pricing-cta:hover{transform:none}}
