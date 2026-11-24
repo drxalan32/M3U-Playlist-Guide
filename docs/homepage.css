@@ -652,3 +652,230 @@ body.home-page .reference-card:hover strong{color:#0755bd;gap:10px}
   body.home-page .reference-card,body.home-page .reference-card .file-sheet,body.home-page .reference-card strong{transition:none}
   body.home-page .reference-card:hover{transform:none}
 }
+
+
+/* Reference-matched featured cards: cinematic artwork, orange accents, blue pill CTAs */
+body.home-page .reference-cards{gap:24px;margin-bottom:46px}
+body.home-page .reference-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  border:1px solid #e5edf7;
+  border-bottom:5px solid #ff8a00;
+  border-radius:21px;
+  background:#fff;
+  box-shadow:0 14px 30px rgba(12,35,70,.13);
+  overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+body.home-page .reference-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 38px rgba(12,35,70,.19);
+  text-decoration:none;
+}
+body.home-page .reference-card .card-art{
+  flex:none;
+  height:190px;
+  overflow:hidden;
+  background-color:#061d43;
+  border-radius:0;
+}
+body.home-page .reference-card .card-art:before{
+  inset:0;
+  border:0;
+  border-radius:0;
+  background:
+    linear-gradient(145deg,transparent 0 64%,rgba(0,12,35,.14) 100%),
+    repeating-linear-gradient(135deg,transparent 0 52px,rgba(90,190,255,.035) 53px 55px);
+}
+body.home-page .reference-card .card-art:after{
+  z-index:3;
+  width:130%;
+  height:40px;
+  left:-8%;
+  bottom:-23px;
+  transform:rotate(-7deg);
+  border-radius:50% 50% 0 0;
+  background:linear-gradient(90deg,#ff9b00,#ff6a00 55%,#ff9b00);
+  filter:blur(.2px);
+  opacity:.98;
+}
+body.home-page .reference-card .art-m3u{
+  background:
+    radial-gradient(ellipse at 70% 70%,#087ed0 0,transparent 43%),
+    linear-gradient(135deg,#031638,#073d78 58%,#04152f);
+}
+body.home-page .reference-card .file-sheet{
+  width:104px;height:132px;
+  border:2px solid #53dcff;
+  border-radius:13px;
+  background:linear-gradient(145deg,#168df2,#0752b8 72%,#063d91);
+  box-shadow:0 0 20px #00bfff99,0 15px 28px #00102eaa,inset 0 1px 0 #baf4ff;
+  transform:rotate(5deg) translateY(4px);
+}
+body.home-page .reference-card .file-sheet:after{
+  content:"";
+  position:absolute;
+  top:0;right:0;
+  width:26px;height:26px;
+  background:linear-gradient(135deg,#75eaff 0 49%,#0b66c6 51%);
+  clip-path:polygon(0 0,100% 100%,100% 0);
+}
+body.home-page .reference-card .file-sheet b{
+  padding:5px 10px;
+  background:transparent;
+  color:#fff;
+  font-size:28px;
+  letter-spacing:0;
+}
+body.home-page .reference-card .file-sheet span{
+  display:grid;place-items:center;
+  width:48px;height:48px;
+  border-radius:50%;
+  background:#00bdf4;
+  color:#fff;
+  font-size:25px;
+  box-shadow:0 0 16px #00caff;
+}
+body.home-page .reference-card .art-device{
+  background:
+    radial-gradient(ellipse at 70% 70%,#087fbd 0,transparent 46%),
+    linear-gradient(135deg,#05234c,#07528b 60%,#03152f);
+}
+body.home-page .reference-card .device-remote{
+  height:155px;width:43px;top:6px;left:25%;
+  border:1px solid #a9d6f4;
+  border-radius:24px;
+  background:linear-gradient(90deg,#060e1c,#50657c 48%,#0a1423);
+  box-shadow:0 0 12px #4cc9f066,0 15px 25px #00102eaa;
+  transform:rotate(12deg);
+}
+body.home-page .reference-card .device-stick{
+  right:9%;bottom:0;width:62%;height:104px;
+  border:1px solid #426a8e;
+  border-radius:12px 12px 0 0;
+  background:linear-gradient(145deg,#102b4c,#020c1d 75%);
+  color:#fff;
+  font-size:22px;
+  text-shadow:0 0 12px #4cc9f0;
+}
+body.home-page .reference-card .device-stick:before{
+  content:"Kemo";
+  color:#fff;
+  margin-right:3px;
+}
+body.home-page .reference-card .art-epg{
+  background:
+    radial-gradient(ellipse at 48% 60%,#087ac8 0,transparent 56%),
+    linear-gradient(135deg,#031738,#07518c 60%,#03132d);
+}
+body.home-page .reference-card .epg-screen{
+  width:84%;
+  gap:9px;
+  padding:13px 12px;
+  border:2px solid #00bfff;
+  border-radius:13px;
+  background:linear-gradient(145deg,#06172f,#062d5b);
+  box-shadow:0 0 18px #00bfff88,0 15px 28px #00102eaa;
+  transform:perspective(600px) rotateY(-3deg);
+  font-size:12px;
+}
+body.home-page .reference-card .epg-screen b{color:#fff;font-size:16px}
+body.home-page .reference-card .epg-screen span{
+  padding:7px 8px;
+  border:1px solid #1477c5;
+  border-radius:5px;
+  background:#0c4d88;
+  color:#e9f6ff;
+}
+body.home-page .reference-card .art-speed{
+  background:
+    radial-gradient(ellipse at 65% 55%,#075a9e 0,transparent 48%),
+    linear-gradient(135deg,#031638,#06477e 65%,#03132d);
+}
+body.home-page .reference-card .gauge-arc{
+  border-color:#00caff;
+  border-bottom-color:#ff8a00;
+  box-shadow:0 0 20px #00caffaa;
+  transform:rotate(-8deg);
+}
+body.home-page .reference-card .speed-gauge b{
+  color:#fff;
+  text-shadow:0 0 16px #00caff;
+}
+body.home-page .reference-card>div:not(.card-art){
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:19px 20px 21px;
+}
+body.home-page .reference-card h2{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin:0 0 8px;
+  color:#102747;
+  font-size:20px;
+  line-height:1.25;
+  letter-spacing:-.55px;
+}
+body.home-page .reference-card h2:before{
+  display:inline-grid;
+  flex:0 0 30px;
+  width:30px;height:30px;
+  place-items:center;
+  color:#ff8700;
+  font-size:27px;
+  line-height:1;
+  font-weight:900;
+}
+body.home-page .reference-card:nth-child(1) h2:before{content:"▤"}
+body.home-page .reference-card:nth-child(2) h2:before{content:"▣"}
+body.home-page .reference-card:nth-child(3) h2:before{content:"▦"}
+body.home-page .reference-card:nth-child(4) h2:before{content:"⚒"}
+body.home-page .reference-card p{
+  flex:1;
+  min-height:54px;
+  margin:0 0 17px;
+  color:#263d5c;
+  font-size:16px;
+  line-height:1.52;
+}
+body.home-page .reference-card strong{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:46px;
+  padding:0 22px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#0879ed,#0751b5);
+  color:#fff;
+  font-size:15px;
+  font-weight:800;
+  box-shadow:0 6px 14px rgba(5,83,184,.22);
+  transition:background .2s ease,transform .2s ease;
+}
+body.home-page .reference-card:hover strong{
+  color:#fff;
+  background:linear-gradient(180deg,#086bd4,#043f94);
+  transform:translateY(-1px);
+}
+@media(max-width:1050px){
+ body.home-page .reference-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.home-page .reference-card .card-art{height:180px}
+}
+@media(max-width:720px){
+ body.home-page .reference-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ body.home-page .reference-card .card-art{height:140px}
+ body.home-page .reference-card>div:not(.card-art){padding:14px}
+ body.home-page .reference-card h2{font-size:16px;gap:7px}
+ body.home-page .reference-card h2:before{flex-basis:24px;width:24px;font-size:22px}
+ body.home-page .reference-card p{font-size:13px;min-height:0}
+ body.home-page .reference-card strong{min-height:40px;padding:0 14px;font-size:12px}
+}
+@media(max-width:420px){
+ body.home-page .reference-cards{grid-template-columns:1fr}
+ body.home-page .reference-card .card-art{height:175px}
+}
