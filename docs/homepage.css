@@ -879,3 +879,32 @@ body.home-page .reference-card:hover strong{
  body.home-page .reference-cards{grid-template-columns:1fr}
  body.home-page .reference-card .card-art{height:175px}
 }
+
+
+/* Final brand polish: keep the guide hub consistently navy, blue and cyan. */
+body.home-page .reference-card{
+  border-bottom-color:#4cc9f0;
+}
+body.home-page .reference-card .card-art:after{
+  background:linear-gradient(90deg,#4cc9f0,#0879ed 55%,#4cc9f0);
+}
+body.home-page .reference-card h2:before{
+  color:#0879ed;
+}
+body.home-page .reference-card .gauge-arc{
+  border-bottom-color:#4cc9f0;
+}
+body.home-page .reference-card .file-sheet span{
+  background:#0879ed;
+  box-shadow:0 0 16px rgba(76,201,240,.55);
+}
+body.home-page .reference-card .file-sheet{
+  border-color:#4cc9f0;
+}
+body.home-page .reference-card .reference-card-cta,
+body.home-page .reference-card strong{
+  background:linear-gradient(180deg,#0879ed,#0751b5);
+}
+body.home-page .reference-card:hover strong{
+  background:linear-gradient(180deg,#086bd4,#043f94);
+}
