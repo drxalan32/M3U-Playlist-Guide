@@ -879,3 +879,29 @@ body.home-page .reference-card:hover strong{
  body.home-page .reference-cards{grid-template-columns:1fr}
  body.home-page .reference-card .card-art{height:175px}
 }
+
+
+/* Use the exact supplied card artwork files */
+body.home-page .reference-card .card-art{
+  height:auto;
+  aspect-ratio:470 / 254;
+  display:block;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:center;
+}
+body.home-page .reference-card .card-art:before,
+body.home-page .reference-card .card-art:after{display:none}
+body.home-page .reference-card .card-art>*{visibility:hidden}
+body.home-page .reference-card:nth-child(1) .card-art{
+  background-image:url("images/m3u-playlist-card.png");
+}
+body.home-page .reference-card:nth-child(2) .card-art{
+  background-image:url("images/iptv-setup-card.png");
+}
+body.home-page .reference-card:nth-child(3) .card-art{
+  background-image:url("images/epg-guide-card.png");
+}
+body.home-page .reference-card:nth-child(4) .card-art{
+  background-image:url("images/troubleshooting-card.png");
+}
