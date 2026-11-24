@@ -908,3 +908,26 @@ body.home-page .reference-card strong{
 body.home-page .reference-card:hover strong{
   background:linear-gradient(180deg,#086bd4,#043f94);
 }
+
+
+/* Layout correction: keep the featured guide cards compact on desktop-sized viewports. */
+@media (min-width:901px){
+  body.home-page .reference-cards{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+  }
+  body.home-page .reference-card .card-art{height:150px}
+  body.home-page .reference-card>div:not(.card-art){padding:16px 16px 18px}
+  body.home-page .reference-card h2{font-size:18px}
+  body.home-page .reference-card p{font-size:14px;line-height:1.45}
+  body.home-page .reference-card strong{min-height:42px;padding-inline:16px;font-size:14px}
+}
+@media (max-width:900px) and (min-width:721px){
+  body.home-page .reference-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (max-width:720px){
+  body.home-page .reference-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+}
+@media (max-width:420px){
+  body.home-page .reference-cards{grid-template-columns:1fr}
+}
