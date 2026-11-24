@@ -88,32 +88,37 @@
 </section>
 <section class="provider-showcase" aria-labelledby="provider-showcase-title">
 <style>
-.provider-showcase{margin:34px 0;padding:0}
-.provider-showcase .provider-intro{max-width:720px;margin-bottom:22px}
-.provider-showcase h2{margin:0 0 10px;color:#17243b;font-size:clamp(23px,3vw,30px);letter-spacing:-.6px}
-.provider-showcase .provider-intro p{margin:0;color:#59677b;font-size:14px;line-height:1.7}
-.provider-showcase .provider-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.provider-showcase .provider-card{overflow:hidden;border:1px solid #cbd7e8;border-radius:14px;background:#fff;box-shadow:0 8px 22px #142b480d}
-.provider-showcase .provider-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 15px;background:linear-gradient(110deg,#0759bd,#087de8);color:#fff;font-size:13px;font-weight:800}
-.provider-showcase .provider-card:nth-child(2) .provider-card-head{background:linear-gradient(110deg,#123c76,#087fc1)}
-.provider-showcase .provider-card:nth-child(3) .provider-card-head{background:linear-gradient(110deg,#164b8c,#0b68c8)}
-.provider-showcase .provider-card-head span:last-child{font-size:10px;font-weight:600;opacity:.9}
-.provider-showcase .provider-card-body{padding:16px}
-.provider-showcase .provider-tag{display:inline-block;margin-bottom:12px;padding:4px 9px;border:1px solid #c8dcf7;border-radius:20px;background:#eef6ff;color:#0759bd;font-size:10px;font-weight:750}
-.provider-showcase .provider-card ul{display:grid;gap:9px;margin:0 0 16px;padding:0;list-style:none;color:#4b586b;font-size:12px}
-.provider-showcase .provider-card li:before{content:"✓";margin-right:8px;color:#0874d1;font-weight:900}
-.provider-showcase .provider-cta{display:block;padding:10px 12px;border-radius:24px;background:#0869d8;color:#fff;text-align:center;text-decoration:none;font-size:12px;font-weight:800}
-.provider-showcase .provider-cta:hover{background:#0758b5}
+.provider-showcase{margin:42px 0;padding:0}
+.provider-showcase .provider-intro{max-width:760px;margin-bottom:22px}
+.provider-showcase h2{margin:0 0 10px;color:#172033;font-size:clamp(24px,3vw,30px);letter-spacing:-.7px}
+.provider-showcase .provider-intro p{margin:0;color:#52627a;font-size:14px;line-height:1.65}
+.provider-showcase .provider-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.provider-showcase .provider-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #cbd7e8;border-radius:13px;background:#fff;box-shadow:0 8px 24px rgba(16,38,74,.08)}
+.provider-showcase .provider-card-head{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 14px;background:linear-gradient(100deg,#0758c9,#0875e8);color:#fff;font-size:13px;font-weight:850}
+.provider-showcase .provider-card:nth-child(2) .provider-card-head{background:linear-gradient(100deg,#0d4e9c,#0875e8)}
+.provider-showcase .provider-card:nth-child(3) .provider-card-head{background:linear-gradient(100deg,#123c76,#0875e8)}
+.provider-showcase .provider-card-head span:last-child{font-size:10px;font-weight:650;opacity:.95}
+.provider-showcase .provider-card-body{display:flex;flex:1;flex-direction:column;padding:16px}
+.provider-showcase .provider-tag{align-self:flex-start;display:inline-block;margin-bottom:13px;padding:4px 9px;border:1px solid #bfd8fa;border-radius:20px;background:#edf5ff;color:#0759bd;font-size:10px;font-weight:800}
+.provider-showcase .provider-card ul{display:grid;gap:9px;margin:0 0 18px;padding:0;list-style:none;color:#46566d;font-size:12px;line-height:1.45}
+.provider-showcase .provider-card li{position:relative;padding-left:17px}
+.provider-showcase .provider-card li:before{content:"✓";position:absolute;left:0;top:0;color:#086bd8;font-weight:900}
+.provider-showcase .provider-cta{display:block;margin-top:auto;padding:11px 12px;border-radius:24px;background:linear-gradient(100deg,#075ec9,#0878e8);color:#fff;text-align:center;text-decoration:none;font-size:12px;font-weight:850;box-shadow:0 5px 12px rgba(8,100,220,.16)}
+.provider-showcase .provider-cta:hover{background:#0758b5;text-decoration:none}
 .provider-showcase .provider-subnote{margin:8px 0 0;color:#8792a3;text-align:center;font-size:10px}
-.provider-showcase .provider-disclosure{margin:14px 0 24px;color:#778397;font-size:10px;font-style:italic;line-height:1.6}
-.provider-showcase .provider-table-wrap{overflow-x:auto;border:1px solid #cbd7e8;border-radius:15px;background:#fff;box-shadow:0 8px 22px #142b480d}
+.provider-showcase .provider-disclosure{margin:14px 0 27px;color:#778397;font-size:10px;font-style:italic;line-height:1.6}
+.provider-showcase .provider-table-title{margin:0 0 12px;color:#172033;font-size:22px;letter-spacing:-.45px}
+.provider-showcase .provider-table-wrap{overflow-x:auto;border:1px solid #c5d2e4;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(16,38,74,.07)}
 .provider-showcase table{width:100%;min-width:600px;border-collapse:collapse;font-size:12px}
 .provider-showcase th,.provider-showcase td{padding:11px 13px;border-bottom:1px solid #d9e2ef;text-align:center}
-.provider-showcase thead th{background:#f0f4fa;color:#1b2a42;font-size:11px}
-.provider-showcase tbody th{text-align:left;font-weight:600}
+.provider-showcase thead th{background:#f0f3f8;color:#1b2a42;font-size:11px}
+.provider-showcase thead th:first-child{width:32%;text-align:left}
+.provider-showcase tbody th{text-align:left;font-weight:650;color:#26364d}
+.provider-showcase tbody td{color:#35445b}
 .provider-showcase tbody tr:last-child th,.provider-showcase tbody tr:last-child td{border-bottom:0}
 .provider-showcase .provider-table-note{margin:12px 0 0;color:#78869a;font-size:11px;line-height:1.6}
-@media(max-width:760px){.provider-showcase .provider-grid{grid-template-columns:1fr}.provider-showcase .provider-card-body{padding:18px}}
+@media(max-width:900px){.provider-showcase .provider-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.provider-showcase .provider-grid{grid-template-columns:1fr}.provider-showcase .provider-card-body{padding:18px}.provider-showcase .provider-table-title{font-size:20px}}
 </style>
 <div class="provider-intro">
 <h2 id="provider-showcase-title">Where to Get an IPTV M3U URL</h2>
