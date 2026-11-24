@@ -831,3 +831,17 @@ body{background:#fff;color:#071633;font-family:Inter,ui-sans-serif,system-ui,-ap
 }
 @media(max-width:420px){.reference-cards{grid-template-columns:1fr}.card-art{height:150px}}
 @media(prefers-reduced-motion:reduce){.reference-card,.file-sheet,.reference-card strong{transition:none}.reference-card:hover{transform:none}}
+
+
+/* Featured setup card: keep the visual aligned with the blue brand palette. */
+.art-device .device-stick{
+  background:linear-gradient(145deg,#123d65,#071b33 78%);
+  color:#4cc9f0;
+  border-color:rgba(76,201,240,.45);
+}
+.art-device .device-stick::before,
+.art-device .device-stick::after{
+  background:#123d65;
+}
+.reference-card:hover strong{color:#0f6fa8}
+.reference-card:nth-child(2) h2{color:#0f2a4a}
